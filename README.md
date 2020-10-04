@@ -35,11 +35,11 @@ https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWN
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語<br>
-  HTML<br>
-  CSS<br>
-  JavaScript<br>
-  Ruby 2.7.1<br>
-  SQL<br>
+      HTML<br>
+      CSS<br>
+      JavaScript<br>
+      Ruby 2.7.1<br>
+      SQL<br>
 - フレームワーク：Ruby on Rails 5.2.4
 - JSライブラリ：jQuery
 - 仮想環境：Vagrant,VirtualBox
