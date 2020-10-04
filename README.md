@@ -20,14 +20,24 @@
 ### 主な利用シーン
 日常、お買い物中
 
+
+
 ## 設計書
 
 ### 機能一覧
+・指定期間での通知機能<br>
+・統計による残量予想通知<br>
+・画像判定によるジャンル分別<br>
+
 https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing
+
 
 ## 開発環境
 - OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
+- 言語：HTML<br>
+	CSS<br>
+	JavaScript<br>
+	Ruby 2.7.1,SQL<br>
+- フレームワーク：Ruby on Rails 5.2.4
 - JSライブラリ：jQuery
 - 仮想環境：Vagrant,VirtualBox
