@@ -49,10 +49,12 @@ https://drive.google.com/file/d/16s6xx1Tdl2uN3RYjgAEN9ZdfjyYnURsp/view?usp=shari
 
 ## 開発環境
 - OS：Linux(CentOS)
-- 言語：HTML<br>
-	CSS<br>
-	JavaScript<br>
-	Ruby 2.7.1,SQL<br>
+- 言語<br>
+      HTML<br>
+      CSS<br>
+      JavaScript<br>
+      Ruby 2.7.1<br>
+      SQL<br>
 - フレームワーク：Ruby on Rails 5.2.4
 - JSライブラリ：jQuery
 - 仮想環境：Vagrant,VirtualBox
