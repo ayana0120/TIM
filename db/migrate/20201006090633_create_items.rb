@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
     create_table :items do |t|
       t.string :name
       t.string :image_id
-      t.integer :quantity
+      t.integer :quantity, default: 1
       t.date :exp
       t.text :memo
       t.integer :user_id

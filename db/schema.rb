@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_10_06_090646) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "image_id"
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.date "exp"
     t.text "memo"
     t.integer "user_id"
