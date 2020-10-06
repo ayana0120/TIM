@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :image_id
       t.integer :quantity
-      t.data :exp
+      t.date :exp
       t.text :memo
       t.integer :user_id
       t.integer :genre_id

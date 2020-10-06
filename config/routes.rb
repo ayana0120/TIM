@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     registrations: 'devise/registrations'
   }
 
-  root "users/top"
+  root "users#top"
 
   resources :users, only:[:show]
   get "/about" => "users#about"
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :items
   get "/items/search" => "items#search"
 
-  resources :genre, only:[:index, :create, :update, :destroy]
+  resources :genres, only:[:index, :create, :update, :destroy]
 end
