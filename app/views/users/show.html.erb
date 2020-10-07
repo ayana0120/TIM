@@ -3,11 +3,11 @@
 <table class="table item_limit_index">
   <% @limit_items.each do |item| %>
   	<tr>
-  	  <td><%= item.created_at.strftime("%Y-%m-%d") %></td>
+  	  <td><%= item.created_at.strftime("%Y/%m/%d") %></td>
   	  <td><%= item.genre.name %></td>
   	  <td><%= item.name %></td>
   	  <td><%= item.quantity %></td>
-  	  <td><%= item.exp %></td>
+  	  <td><%= item.exp.strftime("%Y/%m/%d") %></td>
   	</tr>
   <% end %>
 </table>
@@ -22,11 +22,11 @@
 <table class="table items_index">
   <% @items.each do |item| %>
   	<tr>
-  	  <td><%= item.created_at.strftime("%Y-%m-%d") %></td>
+  	  <td><%= item.created_at.strftime("%Y/%m/%d") %></td>
   	  <td><%= item.genre.name %></td>
   	  <td><%= item.name %></td>
   	  <td><%= item.quantity %></td>
-  	  <td><%= item.exp %></td>
+  	  <td><%= item.exp.strftime("%Y/%m/%d") %></td>
   	</tr>
   <% end %>
 </table>

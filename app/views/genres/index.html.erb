@@ -1,24 +1,26 @@
-<h1>Genres#index</h1>
-<p>Find me in app/views/genres/index.html.erb</p>
+<h3>ジャンル一覧</h3>
 <table class="table genres_index">
-  <thead>
-    <%= form_for(@genre) do |f| %>
-      <div class="genre_new">
-        <%= f.text_field :name, class: "col-xs-6" %>
-        <%= f.submit "追加", class: "btn btn-primary col-xs-2" %>
-      </div>
-    <% end %>
+  <thead class="contents">
+  	<tr>
+  	  <th>ジャンル名</th>
+  	  <th></th>
+  	  <th></th>
+  	</tr>
   </thead>
-
   <tbody>
-    <div class="genres_show">
-	  <%= form_for(@genre) do |f| %>
-	  	<% @genres.each do |genre| %>
+    <tr class="genre_new">
+      <%= form_for(@newgenre) do |f| %>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.submit "追加", class: "btn btn-primary" %>
+      <% end %></td>
+    </tr>
+   	  <% @genres.each do |genre| %>
+	  	<%= form_for(genre) do |f| %>
 	      <div class="genre_edit">
 	  	    <tr>
-	      	  <td><%= f.text_field :name, class: "col-xs-6" %></td>
-	      	  <%= f.submit "変更", class: "btn btn-primary col-xs-2" %></td>
-	      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger col-xs-2" %></td>
+	      	  <td><%= f.text_field :name %></td>
+	      	  <td><%= f.submit "変更", class: "btn btn-success" %></td>
+	      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
 	        </tr>
 	      </div>
 	    <% end %>

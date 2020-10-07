@@ -1,23 +1,25 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
 <%= form_for(@item) do |f| %>
   <div class="item_image">
-  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
+  	<%= attachment_image_tag @item, :image_id, size: "300x300", format: "jpg",
   	fallback: "no-data.jpg", size: "300x300" %>
-  	<%= f.attachment_field :image %></div>
-  <div class="item_name">アイテム名</div>
-  	<%= f.text_field :name %>
-  <div class="item_genre">ジャンル</div>
-  	<%= f.select :genre_id, Genre.all.map {|genre| [genre.genre_name, genre.id ] } %>
-  <div class="new_genre">ジャンル新規登録</div>
-  	<%= f.text_field :genre, :value => @user.genre %>
-  <div class="item_quantity">個数</div>
-  	<%= f.number_field :quantity %>
-  <div class="item_exp">期限</div>
-  	<%= f.text_field :exp %>
-  <div class="item_memo">メモ</div>
-  	<%= f.text_area :memo %>
+  	<%= f.attachment_field :image %>
+  </div>
+  <div class="item_name">アイテム名
+  	<%= f.text_field :name, class:"item_field" %>
+  </div>
+  <div class="item_genre">ジャンル
+  	<%= f.select :genre_id, Genre.all.map {|genre| [genre.name, genre.id ] }, nclude_blanck: "選択してください" %>
+  </div>
+  <div class="item_quantity">個数
+  	<%= f.number_field :quantity, class:"item_field" %>
+  </div>
+  <div class="item_exp">期限
+  	<%= f.date_field :exp, class:"item_field" %>
+  </div>
+  <div class="item_memo">メモ
+  	<%= f.text_area :memo, class:"item_field" %>
+  </div>
   <div class="item_create">
-  	<%= f.submit "変更", class:"btn btn-primary" %>
+  	<%= f.submit "追加", class:"btn btn-primary" %>
   </div>
 <% end %>
