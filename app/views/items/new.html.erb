@@ -1,25 +1,31 @@
-<%= form_for(@item) do |f| %>
-  <div class="item_image">
-  	<%= attachment_image_tag @item, :image_id, size: "300x300", format: "jpg",
-  	fallback: "no-data.jpg", size: "300x300" %>
-  	<%= f.attachment_field :image %>
-  </div>
-  <div class="item_name">アイテム名
-  	<%= f.text_field :name, class:"item_field" %>
-  </div>
-  <div class="item_genre">ジャンル
-  	<%= f.select :genre_id, Genre.all.map {|genre| [genre.name, genre.id ] }, nclude_blanck: "選択してください" %>
-  </div>
-  <div class="item_quantity">個数
-  	<%= f.number_field :quantity, class:"item_field" %>
-  </div>
-  <div class="item_exp">期限
-  	<%= f.date_field :exp, class:"item_field" %>
-  </div>
-  <div class="item_memo">メモ
-  	<%= f.text_area :memo, class:"item_field" %>
-  </div>
-  <div class="item_create">
-  	<%= f.submit "追加", class:"btn btn-primary" %>
-  </div>
-<% end %>
+<div class="col-md-5">
+	<h2>アイテム追加</h2>
+	<%= form_for(@item) do |f| %>
+	  <div class="item_image">
+	  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
+	  	fallback: "no-data.jpg", size: "300x300" %>
+	  	<%= f.attachment_field :image %>
+	  </div>
+</div>
+
+<div class="col-md-7">
+	  <div class="item_name">アイテム名
+	  	<%= f.text_field :name, class:"item_field" %>
+	  </div>
+	  <div class="item_genre">ジャンル
+	  	<%= f.select :genre_id, Genre.all.map {|genre| [genre.name, genre.id ] }, nclude_blanck: "選択してください" %>
+	  </div>
+	  <div class="item_quantity">個数
+	  	<%= f.number_field :quantity, class:"item_field" %>
+	  </div>
+	  <div class="item_exp">期限
+	  	<%= f.date_field :exp, class:"item_field" %>
+	  </div>
+	  <div class="item_memo">メモ
+	  	<%= f.text_area :memo, class:"item_field" %>
+	  </div>
+	  <div class="item_create">
+	  	<%= f.submit "追加", class:"btn btn-primary" %>
+	  </div>
+	<% end %>
+</div>
