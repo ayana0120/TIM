@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
-  	@items = current_user.items
+  	@items = Item.all
+    @limit_items = Item.limit(5).order("exp")
+    @genres = Genre.all
   end
 
   def top

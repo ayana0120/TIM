@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :show, :update, :update]
 
   def index
-    @items = current_user.items.includes(:user)
+    @items = Item.all
   end
 
   def new
@@ -23,7 +23,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @genres = current_user.genres.includes(:user)
   end
 
   def update
@@ -48,7 +47,7 @@ class ItemsController < ApplicationController
   protected
 
   def item_params
-    params.require(:item).permit(:name, :image, :quantity, :exp, :memo)
+    params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id )
   end
 
   def set_item

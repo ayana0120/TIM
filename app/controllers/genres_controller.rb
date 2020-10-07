@@ -2,7 +2,9 @@ class GenresController < ApplicationController
 	before_action :set_genre, only: [:update, :destroy]
 
   def index
-  	@genre = current_user.genres
+    @newgenre = Genre.new
+  	@genres = Genre.all
+    @user = current_user
   end
 
   def create
