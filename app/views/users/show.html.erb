@@ -1,2 +1,32 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+<table class="table item_limit_index">
+  <% @limit_items.each do |item| %>
+  	<tr>
+  	  <td><%= item.created_at.strftime("%Y-%m-%d") %></td>
+  	  <td><%= item.genre.name %></td>
+  	  <td><%= item.name %></td>
+  	  <td><%= item.quantity %></td>
+  	  <td><%= item.exp %></td>
+  	</tr>
+  <% end %>
+</table>
+
+<table class="table genres_index">
+  <% @genres.each do |genre| %>
+	<tr>
+  	  <td><%= genre.name %></td>
+    </tr>
+  <% end %>
+</table>
+<table class="table items_index">
+  <% @items.each do |item| %>
+  	<tr>
+  	  <td><%= item.created_at.strftime("%Y-%m-%d") %></td>
+  	  <td><%= item.genre.name %></td>
+  	  <td><%= item.name %></td>
+  	  <td><%= item.quantity %></td>
+  	  <td><%= item.exp %></td>
+  	</tr>
+  <% end %>
+</table>

@@ -1,2 +1,15 @@
 <h1>Items#show</h1>
 <p>Find me in app/views/items/show.html.erb</p>
+  <div class="item_image">
+  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
+  	fallback: "no-data.jpg", size: "300x300" %>
+  <div class="item_name">アイテム名</div>
+  	<%= @item.name %>
+  <div class="item_genre">ジャンル</div>
+  	<%= @item.genre.name %>
+  <div class="item_quantity">個数</div>
+  	<%= @item.quantity %>
+  <div class="item_exp">期限</div>
+  	<%= @item.exp %>
+  <div class="item_memo">メモ</div>
+  	<%= @item.memo %>

@@ -1,2 +1,29 @@
 <h1>Genres#index</h1>
 <p>Find me in app/views/genres/index.html.erb</p>
+<table class="table genres_index">
+  <thead>
+    <%= form_for(@genre) do |f| %>
+      <div class="genre_new">
+        <%= f.text_field :name, class: "col-xs-6" %>
+        <%= f.submit "追加", class: "btn btn-primary col-xs-2" %>
+      </div>
+    <% end %>
+  </thead>
+
+  <tbody>
+    <div class="genres_show">
+	  <%= form_for(@genre) do |f| %>
+	  	<% @genres.each do |genre| %>
+	      <div class="genre_edit">
+	  	    <tr>
+	      	  <td><%= f.text_field :name, class: "col-xs-6" %></td>
+	      	  <%= f.submit "変更", class: "btn btn-primary col-xs-2" %></td>
+	      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger col-xs-2" %></td>
+	        </tr>
+	      </div>
+	    <% end %>
+	  <% end %>
+	</div>
+  </tbody>
+</table>
+
