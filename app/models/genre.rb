@@ -1,5 +1,5 @@
 class Genre < ApplicationRecord
-  validate :name, presence: true
+  validates :name, presence: true
 
-  belongs_to :user
+  has_many :items
 end
