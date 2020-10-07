@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+    sessions: 'devise/sessions',
+    registrations: 'devise/registrations'
+  }
+
+  root "users#top"
+
+  resources :users, only:[:show]
+  get "/about" => "users#about"
+
+  resources :items
+  get "/items/search" => "items#search"
+
+  resources :genres, only:[:index, :create, :update, :destroy]
 end

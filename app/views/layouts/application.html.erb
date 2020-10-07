@@ -5,11 +5,90 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-dark bg-dark">
+      <div class="container">
+
+      <% if user_signed_in? %>
+        <nav class="nav navbar-left">
+          <span class="logo">
+            <%= link_to user_path(current_user) do %>
+              <span class="logo">TIM</span>
+            <% end %>
+          </span>
+        </nav>
+        <ul class="nav navbar-right">
+          <li class="">
+            <%= link_to new_item_path, class:"btn btn-link" do %>
+              <div class="link">アイテム追加</div>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to items_path, class:"btn btn-link" do %>
+              <div class="link">アイテム一覧</div>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to genres_path, class:"btn btn-link" do %>
+              <div class="link">ジャンル</div>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-link" do %>
+              <div class="link">ログアウト</div>
+            <% end %>
+          </li>
+        </ul>
+
+      <% else %>
+
+        <nav class="nav navbar-left">
+          <span class="logo">
+            <%= link_to root_path do %>
+              <span class="logo">TIM</span>
+            <% end %>
+          </span>
+        </nav>
+        <ul class="nav navbar-right">
+          <li class="">
+            <%= link_to new_user_registration_path, class:"btn btn-link" do %>
+              <div class="link">新規登録</div>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to new_user_session_path, class:"btn btn-link" do %>
+              <div class="link">ログイン</div>
+            <% end %>
+          </li>
+          <li class="">
+            <%= link_to about_path, class:"btn btn-link" do %>
+              <div class="link">About</div>
+            <% end %>
+          </li>
+        </ul>
+      <% end %>
+      </div>
+    </header>
+
+    <main>
+      <p class="notice"><%= notice %></p>
+
+      <%= yield %>
+
+    </main>
+
+    <footer>
+      <p class="text-right"> Copyright © TIM 2020</p>
+    </footer>
+
   </body>
 </html>
