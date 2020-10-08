@@ -1,38 +1,39 @@
-<h2>ジャンル一覧</h2>
-<table class="table genres_index">
-  <thead class="contents">
-  	<tr>
-  	  <th>ジャンル名</th>
-  	  <th>フォーム</th>
-  	  <th></th>
-      <th></th>
-  	</tr>
-  </thead>
-  <tbody>
-    <tr class="genre_new">
-      <td>ジャンル追加</td>
-      <%= form_for(@newgenre) do |f| %>
-        <td><%= f.text_field :name %></td>
-        <td><%= f.submit "追加", class: "btn btn-primary" %>
-      <% end %></td>
-    </tr>
-   	<% @genres.each do |genre| %>
-      <tr>
-        <td>
-          <%= link_to items_path(genre_id: genre) do %>
-            <%= genre.name %>
-          <% end %>
-        </td>
-	  	<%= form_for(genre) do |f| %>
-	      <div class="genre_edit">
-	      	  <td><%= f.text_field :name %></td>
-	      	  <td><%= f.submit "変更", class: "btn btn-success" %></td>
-	      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
-	        </tr>
-	      </div>
-	    <% end %>
-	  <% end %>
-	</div>
-  </tbody>
-</table>
-
+<div class="row">
+  <div class="col-md-12">
+    <h2>ジャンル一覧</h2>
+    <table class="table genres_index">
+      <thead class="contents">
+      	<tr>
+      	  <th>ジャンル名</th>
+      	  <th>フォーム</th>
+      	  <th></th>
+          <th></th>
+      	</tr>
+      </thead>
+      <tbody>
+        <tr class="genre_new">
+          <td>ジャンル追加</td>
+          <%= form_for(@newgenre) do |f| %>
+            <td><%= f.text_field :name %></td>
+            <td><%= f.submit "追加", class: "btn btn-primary" %>
+          <% end %></td>
+        </tr>
+       	<% @genres.each do |genre| %>
+          <tr>
+            <td>
+              <%= link_to items_path(genre_id: genre) do %>
+                <%= genre.name %>
+              <% end %>
+            </td>
+    	  	  <%= form_for(genre) do |f| %>
+    	      	  <td><%= f.text_field :name %></td>
+    	      	  <td><%= f.submit "変更", class: "btn btn-success" %></td>
+    	      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
+            <% end %>
+    	    </tr>
+    	  <% end %>
+    	</div>
+      </tbody>
+    </table>
+  </div>
+</div>
