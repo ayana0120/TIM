@@ -7,8 +7,6 @@
 		  <th>アイテム名</th>
 		  <th>個数</th>
 		  <th>期限</th>
-		  <th></th>
-		  <th></th>
 		</tr>
 	  </thead>
 
@@ -33,7 +31,11 @@
 	<table class="table genres_index">
 	  <% @genres.each do |genre| %>
 		<tr>
-	  	  <td><%= genre.name %></td>
+	  	  <td>
+	  	  	<%= link_to items_path(genre_id: @genre) do %>
+	  	  	  <%= genre.name %>
+	  	  	<% end %>
+    	  </td>
 	    </tr>
 	  <% end %>
 	</table>
@@ -47,8 +49,6 @@
 		  <th>アイテム名</th>
 		  <th>個数</th>
 		  <th>期限</th>
-		  <th></th>
-		  <th></th>
 		</tr>
 	  </thead>
 
