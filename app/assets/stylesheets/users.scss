@@ -1,3 +1,20 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*users/top*/
+.top_main {
+  background-image: url(20180310_114351.jpg);
+  background-position: center;
+  height: 350px;
+  width: 100%;
+}
+/*users/about*/
+.about {
+  height: 350px;
+}
+.about_img {
+  background-image: url(20180310_114351.jpg);
+  background-position: center;
+  height: 300px;
+  object-fit: cover;
+}

@@ -16,7 +16,7 @@
 
   <body>
     <header class="navbar navbar-fixed-top navbar-dark bg-dark">
-      <div class="container">
+      <div class="container-md">
 
       <% if user_signed_in? %>
         <nav class="nav navbar-left">
@@ -80,14 +80,19 @@
     </header>
 
     <main>
-      <p class="notice"><%= notice %></p>
+      <div class="container-fluid">
 
-      <%= yield %>
+            <%= yield %>
+
+          
+      </div>
 
     </main>
 
     <footer>
-      <p class="text-right"> Copyright © TIM 2020</p>
+      <div class="container-md">
+        <p class="text-right"> Copyright © TIM 2020</p>
+      </div>
     </footer>
 
   </body>

@@ -2,7 +2,12 @@ class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :show, :update, :update]
 
   def index
-    @items = Item.all
+    if params[:genre_id]
+      @genre = Genre.find(params[:genre_id])
+      @items = @genre.items.all.includes(:genre)
+    else
+      @items = Item.all.includes(:genre)
+    end
   end
 
   def new
@@ -42,6 +47,8 @@ class ItemsController < ApplicationController
   end
 
   def search
+    @search = Item.ransack(params[:search])
+    @items = @search.result(distinct: true)
   end
 
   protected

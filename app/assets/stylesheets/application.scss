@@ -26,5 +26,15 @@ clearfix::after {
   clear: both;
 }
 body {
-  margin-top: 55px;
+  margin-top: 53px;
+}
+/*header*/
+.navbar {
+  margin: 0;
+}
+
+/*main*/
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
