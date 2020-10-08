@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @limit_items = Item.limit(5).order("exp").includes(:genre)
     @genres = Genre.all
     #検索結果表示のif文考える
+    @search = Item.ransack(params[:search])
+    @items = @search.result(distinct: true)
     if params[:genre_id]
       @genre = Genre.find(params[:genre_id])
       @items - @genre.items.all.includes(:genre)
