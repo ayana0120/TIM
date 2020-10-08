@@ -28,16 +28,28 @@
   </div>
 
   <div class="col-md-4">
-	<table class="table genres_index">
-	  <% @genres.each do |genre| %>
-		<tr>
+	<table class="table sidebar">
+	  <thead>
+	    <tr>
 	  	  <td>
-	  	  	<%= link_to items_path(genre_id: @genre) do %>
-	  	  	  <%= genre.name %>
-	  	  	<% end %>
-    	  </td>
+	  	    <%= search_form_for (@search), url: items_search_path do |f| %>
+	        <%= f.search_field :name_cont, class:"col-md-8" %>
+	        <%= f.submit '検索', class:"btn btn-secondary btn-sm" %>
+		    <% end %>
+		  </td>
 	    </tr>
-	  <% end %>
+	  </thead>
+	  <tbody>
+		<% @genres.each do |genre| %>
+		  <tr>
+		    <td>
+		      <%= link_to items_path(genre_id: @genre) do %>
+		  	    <%= genre.name %>
+		  	  <% end %>
+	    	</td>
+		  </tr>
+		<% end %>
+	  </tbody>
 	</table>
   </div>
 
