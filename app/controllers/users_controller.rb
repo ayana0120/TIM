@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   end
 
   def top
+    @resource = User.new
   end
 
   def about
