@@ -6,5 +6,6 @@ class Item < ApplicationRecord
   end
 
   belongs_to :genre
+  belongs_to :user
   attachment :image
 end
