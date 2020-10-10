@@ -66,3 +66,8 @@ gem 'jquery-rails'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'ransack'
+# SNS認証関連
+# gem 'omniauth'
+# gem 'omniauth-google-oauth2'
+# gem 'omniauth-twitter'
+# gem 'omniauth-yahoojp'

@@ -17,7 +17,7 @@
       <% @items.each do |item| %>
       	<tr>
       	  <td>
-            <%= link_to items_path(genre_id: @genre) do %>
+            <%= link_to items_path(genre_id: item.genre) do %>
               <%= item.genre.name %>
             <% end %>
           </td>

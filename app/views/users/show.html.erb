@@ -14,7 +14,11 @@
 	  <tbody>
 	  <% @limit_items.each do |item| %>
 	  	<tr>
-	  	  <td><%= item.genre.name %></td>
+	  	  <td>
+	  	  	<%= link_to items_path(genre_id: item.genre) do %>
+              <%= item.genre.name %>
+            <% end %>
+          </td>
 	  	  <td>
 	  	  	<%= link_to item_path(item) do %>
   	  	  	  <%= item.name %>
@@ -33,7 +37,7 @@
 	  <thead>
 	    <tr>
 	  	  <td>
-	  	    <%= search_form_for (@search), url: items_search_path, method: :get do |f| %>
+	  	    <%= search_form_for (@q), url: search_path, method: :get do |f| %>
 	        <%= f.search_field :name_cont, class:"col-md-8" %>
 	        <%= f.submit '検索', class:"btn btn-secondary btn-sm" %>
 		    <% end %>
@@ -44,7 +48,7 @@
 		<% @genres.each do |genre| %>
 		  <tr>
 		    <td>
-		      <%= link_to items_path(genre_id: @genre) do %>
+		      <%= link_to items_path(genre_id: genre) do %>
 		  	    <%= genre.name %>
 		  	  <% end %>
 	    	</td>
@@ -66,10 +70,18 @@
 	  </thead>
 
 	  <tbody>
-	  <% @items.each do |item| %>
+	  <% @new_items.each do |item| %>
 	  	<tr>
-	  	  <td><%= item.genre.name %></td>
-	  	  <td><%= item.name %></td>
+	  	  <td>
+	  	  	<%= link_to items_path(genre_id: item.genre) do %>
+              <%= item.genre.name %>
+            <% end %>
+          </td>
+	  	  <td>
+	  	  	<%= link_to item_path(item) do %>
+  	  	  	  <%= item.name %>
+  	  		<% end %>
+  	  	  </td>
 	  	  <td><%= item.quantity %></td>
 	  	  <td><%= item.exp %></td>
 	  	</tr>

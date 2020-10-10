@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'devise/sessions',
     registrations: 'devise/registrations'
+    # ,omniauth_callbacks: "omniauth_callbacks"
   }
 
   root "users#top"
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   get "/about" => "users#about"
 
   resources :items
-  get "/items/search" => "items#search"
+  get "search" => "items#search"
 
   resources :genres, only:[:index, :create, :update, :destroy]
 end

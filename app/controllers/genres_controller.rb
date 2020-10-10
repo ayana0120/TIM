@@ -1,14 +1,15 @@
 class GenresController < ApplicationController
 	before_action :set_genre, only: [:update, :destroy]
+  before_action :authenticate_user!
 
   def index
-    @newgenre = Genre.new
-  	@genres = Genre.all
+    @newgenre = current_user.genres.new
+  	@genres = current_user.genres.all
     @user = current_user
   end
 
   def create
-  	@genre = Genre.new(genre_params)
+  	@genre = current_user.genres.new(genre_params)
   	if @genre.save
   	  redirect_to genres_path
   	else
@@ -39,7 +40,7 @@ class GenresController < ApplicationController
   end
 
   def set_genre
-  	@genre = Genre.find(params[:id])
+  	@genre = current_user.genres.find(params[:id])
   end
 
 end
