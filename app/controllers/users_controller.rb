@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
-    @limit_items = Item.limit(5).order("exp").includes(:genre)
+    @limit_items = Item.limit(5).order("exp IS NULL ASC").includes(:genre)
     @genres = Genre.all
     if params[:genre_id]
       @genre = Genre.find(params[:genre_id])
       @items - @genre.items.all.includes(:genre)
     else
-      @items = Item.all.includes(:genre).order(id: :desc)
+      @new_items = Item.all.includes(:genre).order(id: :desc)
     end
     @q = Item.ransack(params[:q])
     @items = @q.result(distinct: true)
