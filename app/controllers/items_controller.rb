@@ -1,22 +1,23 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :show, :update, :update]
+  before_action :authenticate_user!
 
   def index
     if params[:genre_id]
-      @genre = Genre.find(params[:genre_id])
-      @items = @genre.items.all.includes(:genre)
+      @genre = current_user.genres.find(params[:genre_id])
+      @items = current_user.genres.items.all.includes(:genre)
     else
-      @items = Item.all.includes(:genre)
+      @items = current_user.items.all.includes(:genre)
     end
   end
 
   def new
-    @item = Item.new
-    @genre = Genre.new
+    @item = current_user.items.new
+    @genre = current_user.genres.new
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.new(item_params)
     if @item.save
       redirect_to item_path(@item)
     else
@@ -47,7 +48,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @q = Item.ransack(params[:q])
+    @q = current_user.items.ransack(params[:q])
     @items = @q.result(distinct: true)
   end
 
@@ -57,8 +58,12 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id )
   end
 
+  def genre_params
+    params.require(:genre).permit(:name)
+  end
+
   def set_item
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 
 end
