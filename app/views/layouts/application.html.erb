@@ -27,6 +27,9 @@
           </span>
         </nav>
         <ul class="nav navbar-right">
+          <li class="user_name">
+            <p><%= current_user.name %>さんようこそ </p>
+          </li>
           <li class="">
             <%= link_to new_item_path, class:"btn btn-link" do %>
               <div class="link">アイテム追加</div>
@@ -81,12 +84,11 @@
 
     <main>
       <div class="container-fluid">
-
+        <p class="notice"><%= notice %>
             <%= yield %>
 
-          
-      </div>
 
+      </div>
     </main>
 
     <footer>

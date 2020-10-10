@@ -1,11 +1,11 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only:[:edit, :show, :update, :update]
+  before_action :set_item, only:[:edit, :show, :update, :destroy ]
   before_action :authenticate_user!
 
   def index
     if params[:genre_id]
       @genre = current_user.genres.find(params[:genre_id])
-      @items = current_user.genres.items.all.includes(:genre)
+      @items = @genre.items.all.includes(:genre)
     else
       @items = current_user.items.all.includes(:genre)
     end
