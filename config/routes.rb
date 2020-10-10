@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/about" => "users#about"
 
   resources :items
-  get "/items/search" => "items#search"
+  get "search" => "items#search"
 
   resources :genres, only:[:index, :create, :update, :destroy]
 end

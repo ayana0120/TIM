@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @genre.update(genre_params)
+    if @item.update(item_params)
       redirect_to item_path(@item)
     else
       render :edit
@@ -47,8 +47,8 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @search = Item.ransack(params[:search])
-    @items = @search.result(distinct: true)
+    @q = Item.ransack(params[:q])
+    @items = @q.result(distinct: true)
   end
 
   protected
