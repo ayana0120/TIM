@@ -40,11 +40,11 @@ header {
 }
 .logo {
   font-size: 30px;
-  color: #FF6600;
+  color: #f6aa00;
 }
 .link {
   font-size: 20px;
-  color: #FF6600;
+  color: #f6aa00;
 
 }
 /*main*/
@@ -64,7 +64,80 @@ footer {
   height: 30px;
 }
 .text-right {
-  color: #FF6600;
+  color: #f6aa00;
   margin: 0;
   font-size: 20px;
+}
+
+/*registration*/
+.registration_new {
+  margin: 0 250px 100px;
+  display: inline-block;
+  .field {
+  margin: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  }
+  .sign_up_form {
+    width: 300px;
+    height: 30px;
+  }
+  .name {
+    .sign_up_form{
+      margin-left: 162px;
+    }
+  }
+  .email {
+    .sign_up_form{
+      margin-left: 130px;
+    }
+  }
+  .password1 {
+    .sign_up_form{
+      margin-left: 70px;
+    }
+  }
+  .password2 {
+    .sign_up_form{
+      margin-left: 130px;
+    }
+  }
+  .actions {
+    margin: 50px;
+    .btn {
+      font: 20px;
+      height: 40px;
+    }
+  }
+}
+/*session*/
+.session_new {
+  margin: 0 250px 100px;
+  display: inline-block;
+  .field {
+  margin: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  }
+  .log_in_form {
+    width: 300px;
+    height: 30px;
+  }
+  .email {
+    .log_in_form{
+      margin-left: 130px;
+    }
+  }
+  .password1 {
+    .log_in_form{
+      margin-left: 162px;
+    }
+  }
+  .actions {
+    margin: 50px;
+    .btn {
+      font: 20px;
+      height: 40px;
+    }
+  }
 }
