@@ -3,18 +3,52 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*users/top*/
 .top_main {
-  background-image: url(20180310_114351.jpg);
+  background-image: url(vegetables3.jpg);
   background-position: center;
   height: 350px;
   width: 100%;
+  margin-bottom: 20px;
+  h1 {
+  	font-size: 120px;
+  	margin-left: 64px;
+  	color: #FF6600;
+  	text-align: left;
+   	}
+}
+.site_introduction {
+  background-image: url(site_introduction.jpg);
+  height: 427px;
+   .text{
+  	padding: 130px;
+  	color: #FF6600;
+  	text-align: center;
+   }
+  }
+.login_form {
+  float: center;
 }
 /*users/about*/
 .about {
   height: 350px;
 }
-.about_img {
-  background-image: url(20180310_114351.jpg);
+.about_img1 {
+  background-image: url(supermarket2.jpg);
   background-position: center;
-  height: 300px;
+  height: 350px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+.about_img2 {
+  background-image: url(bathgoods.jpg);
+  background-position: top;
+  height: 350px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.about_img3 {
+  background-image: url(stationery.jpg);
+  background-position: top;
+  height: 350px;
+  margin-left: 10px;
   object-fit: cover;
 }
