@@ -26,7 +26,7 @@ clearfix::after {
   clear: both;
 }
 body {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 /*header*/
 .navbar {
@@ -57,5 +57,14 @@ form {
   width: 100%;
 }
 .row {
-  margin: 0 20px 20px;
+  margin: 20px;
+}
+/*footer*/
+footer {
+  height: 30px;
+}
+.text-right {
+  color: #FF6600;
+  margin: 0;
+  font-size: 20px;
 }
