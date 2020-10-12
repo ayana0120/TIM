@@ -38,7 +38,7 @@
   	color: #F6AA00;
   }
   #user_email, #user_password {
-  	width: 300px;
+  	width: 100%;
   	height: 30px;
   }
 }
@@ -70,11 +70,11 @@
 }
 
 /*users/show*/
-.items_index {
-  padding: 100px auto;
-}
 .sidebar {
   .btn {
     margin: -4px 0 0 20px;
   }
+}
+.search_box {
+  margin-top: 16px;
 }

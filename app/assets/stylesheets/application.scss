@@ -27,17 +27,18 @@ clearfix::after {
 }
 body {
   margin-top: 40px;
+  font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
 }
 .notice {
   margin: 20px;
   font-size: 16px;
   color: #03AF7A;
 }
-
 a {
   font-size: 16px;
   color: #005AFF;
   text-decoration: none;
+  padding: 5px;
 }
 a:hover {
   background-color:#C8C8CB;
@@ -52,7 +53,14 @@ header {
   .btn.btn-link {
     padding: 0 15px;
   }
+  a {
+  padding: 14px 15px 6px;
+  }
 }
+a:hover.btn.btn-link {
+  background-color:#C8C8CB;
+  text-decoration: none;
+  }
 .logo {
   font-size: 30px;
   color: #F6AA00;
