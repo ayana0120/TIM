@@ -13,22 +13,27 @@
     </div>
 
     <div class="col-md-7">
-      <div class="item_name">アイテム名
+      <div class="items name">
+        <%= f.label :アイテム名 %>
     	  <%= f.text_field :name, class:"item_field" %>
       </div>
-      <div class="item_genre">ジャンル
-    	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, nclude_blanck: "選択してください" %>
+      <div class="items genre">
+        <%= f.label :ジャンル %>
+    	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
       </div>
-      <div class="item_quantity">個数
+      <div class="items quantity">
+        <%= f.label :個数 %>
     	  <%= f.number_field :quantity, class:"item_field" %>
       </div>
-      <div class="item_exp">期限
+      <div class="items exp">
+        <%= f.label :期限 %>
     	  <%= f.date_field :exp, class:"item_field" %>
       </div>
-      <div class="item_memo">メモ
-    	  <%= f.text_area :memo, class:"item_field" %>
+      <div class="items memo">
+        <%= f.label :メモ %>
+    	  <%= f.text_area :memo, class:"memo_area" %>
       </div>
-      <div class="item_create">
+      <div class="items create">
     	  <%= f.submit "追加", class:"btn btn-primary" %>
       </div>
     </div>

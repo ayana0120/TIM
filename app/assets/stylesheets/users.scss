@@ -10,7 +10,7 @@
   h1 {
   	font-size: 120px;
   	margin: 0 0 0 64px;
-  	color: #f6aa00;
+  	color: #F6AA00;
   	text-align: left;
    	}
 }
@@ -25,14 +25,14 @@
   margin: 90px 0 0 90px;
   padding-top: 80px;
   font-size: 18px;
-  color: #f6aa00;
+  color: #F6AA00;
   text-align: center;
   display: inline-block;
    }
 .login_form {
   border: 2px;
   h3 {
-  	color: #f6aa00;
+  	color: #F6AA00;
   }
   #user_email, #user_password {
   	width: 300px;
@@ -63,4 +63,14 @@
   height: 350px;
   margin-left: 10px;
   object-fit: cover;
+}
+
+/*users/show*/
+.items_index {
+  padding: 100px auto;
+}
+.sidebar {
+  .btn {
+    margin: -4px 0 0 20px;
+  }
 }

@@ -1,3 +1,49 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*items/index*/
+.items_index {
+  table-layout: fixed;
+}
+
+/*items/new*/
+.items {
+  margin-top: 50px;
+  font-size: 16px;
+  label {
+  	margin: 0;
+  }
+  .item_field, #item_genre_id {
+    width: 200px;
+	height: 30px;
+  }
+  .btn {
+  	width: 336px;
+  }
+}
+.item_image {
+  margin-top: 20px;
+}
+.items.name {
+  margin-top: 80px;
+}
+.name {
+  .item_field {
+    margin-left: 50px;
+  }
+}
+.genre {
+  .item_field {
+    margin-left: 66px;
+  }
+}
+.quantity, .exp {
+  .item_field {
+    margin-left: 98px;
+  }
+}
+.memo_area {
+  width: 200px;
+  margin-left: 98px;
+}
+

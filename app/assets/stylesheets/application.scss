@@ -40,11 +40,11 @@ header {
 }
 .logo {
   font-size: 30px;
-  color: #f6aa00;
+  color: #F6AA00;
 }
 .link {
   font-size: 20px;
-  color: #f6aa00;
+  color: #F6AA00;
 
 }
 /*main*/
@@ -57,14 +57,14 @@ form {
   width: 100%;
 }
 .row {
-  margin: 20px;
+  margin: 50px;
 }
 /*footer*/
 footer {
   height: 30px;
 }
 .text-right {
-  color: #f6aa00;
+  color: #F6AA00;
   margin: 0;
   font-size: 20px;
 }
@@ -140,4 +140,21 @@ footer {
       height: 40px;
     }
   }
+}
+/*ボタンの色*/
+.btn.btn-success {
+  color: #FFFFFF;
+  background-color: #03AF7A;
+}
+.btn.btn-danger {
+  color: #FFFFFF;
+  background-color: #FF4B00;
+}
+.btn.btn-primary {
+  color: #FFFFFF;
+  background-color: #005AFF;
+}
+.btn.btn-info {
+  color: #FFFFFF;
+  background-color: #4BC4FF;
 }
