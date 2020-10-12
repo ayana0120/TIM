@@ -29,11 +29,20 @@ body {
   margin-top: 40px;
 }
 .notice {
-  margin-left: 20px;
+  margin: 20px;
   font-size: 16px;
-  color: #F6AA00;
+  color: #03AF7A;
 }
 
+a {
+  font-size: 16px;
+  color: #005AFF;
+  text-decoration: none;
+}
+a:hover {
+  background-color:#C8C8CB;
+  text-decoration: none;
+}
 /*header*/
 .navbar {
   margin: 0;
@@ -42,9 +51,6 @@ body {
 header {
   .btn.btn-link {
     padding: 0 15px;
-  }
-  a:hover {
-    background-color:#C8C8CB;
   }
 }
 .logo {
@@ -125,13 +131,7 @@ footer {
   margin: 0 250px 100px;
   display: inline-block;
   a {
-  font-size: 16px;
-  color: #F6AA00;
   margin-bottom: 20px;
-  text-decoration: none;
-  }
-  a:hover {
-    background-color:#C8C8CB;
   }
   .field {
   margin: 50px;
