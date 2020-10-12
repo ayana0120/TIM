@@ -8,22 +8,32 @@
   </div>
 
   <div class="col-md-7">
-    <div class="item_name">アイテム名
-    	<%= @item.name %>
+    <div class="items name">アイテム名
+      <span class="item_field">
+    	  <%= @item.name %>
+      </span>
     </div>
-    <div class="item_genre">ジャンル
-    	<%= @item.genre.name %>
+    <div class="items genre">ジャンル
+      <span class="item_field">
+        <%= @item.genre.name %>
+      </span>
     </div>
-    <div class="item_quantity">個数
-    	<%= @item.quantity %>
+    <div class="items quantity">個数
+      <span class="item_field">
+        <%= @item.quantity %>
+      </span>
     </div>
-    <div class="item_exp">期限
-    	<%= @item.exp %>
+    <div class="items exp">期限
+      <span class="item_field">
+        <%= @item.exp %>
+      </span>
     </div>
-    <div class="item_memo">メモ
-    	<%= @item.memo %>
+    <div class="items memo">メモ
+      <span class="memo_area">
+        <%= @item.memo %>
+      </span>
     </div>
-    <div class="items_edit">
+    <div class="items edit">
       <%= link_to "編集", edit_item_path(@item), class:"btn btn-success"  %>
     </div>
   </div>

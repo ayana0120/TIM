@@ -28,6 +28,12 @@ clearfix::after {
 body {
   margin-top: 40px;
 }
+.notice {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #F6AA00;
+}
+
 /*header*/
 .navbar {
   margin: 0;
@@ -37,6 +43,9 @@ header {
   .btn.btn-link {
     padding: 0 15px;
   }
+  a:hover {
+    background-color:#C8C8CB;
+  }
 }
 .logo {
   font-size: 30px;
@@ -45,8 +54,8 @@ header {
 .link {
   font-size: 20px;
   color: #F6AA00;
-
 }
+
 /*main*/
 .container-fluid {
   margin: 0;
@@ -57,7 +66,7 @@ form {
   width: 100%;
 }
 .row {
-  margin: 50px;
+  margin: 0 50px 50px;
 }
 /*footer*/
 footer {
@@ -110,10 +119,20 @@ footer {
     }
   }
 }
+
 /*session*/
 .session_new {
   margin: 0 250px 100px;
   display: inline-block;
+  a {
+  font-size: 16px;
+  color: #F6AA00;
+  margin-bottom: 20px;
+  text-decoration: none;
+  }
+  a:hover {
+    background-color:#C8C8CB;
+  }
   .field {
   margin: 50px;
   padding-left: 50px;
@@ -141,6 +160,12 @@ footer {
     }
   }
 }
+.registration_path {
+  font-size: 16px;
+  color: #F6AA00;
+  margin-bottom: 50px;
+}
+
 /*ボタンの色*/
 .btn.btn-success {
   color: #FFFFFF;

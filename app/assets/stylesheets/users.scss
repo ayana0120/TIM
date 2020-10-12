@@ -19,15 +19,17 @@
   height: 427px;
   }
 .text{
-  background-color: rgba( 255,255,255, 0.6);
+  background-color: rgba( 255,255,255, 0.8);
   height: 250px;
   width: 650px;
   margin: 90px 0 0 90px;
-  padding-top: 80px;
+  padding-top: 85px;
+  display: inline-block;
   font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
   color: #F6AA00;
   text-align: center;
-  display: inline-block;
    }
 .login_form {
   border: 2px;
@@ -39,6 +41,7 @@
   	height: 30px;
   }
 }
+
 /*users/about*/
 .about {
   height: 350px;
