@@ -20,34 +20,41 @@
 
       <% if user_signed_in? %>
         <nav class="nav navbar-left">
-          <span class="logo">
+          <span class="title">
             <%= link_to user_path(current_user) do %>
-              <span class="logo">TIM</span>
+              <span class="logo">
+                <i class="fas fa-hourglass-half"></i>TIM
+              </span>
             <% end %>
           </span>
         </nav>
         <ul class="nav navbar-right">
-          <li class="user_name">
-            <p><%= current_user.name %>さんようこそ </p>
-          </li>
           <li class="">
             <%= link_to new_item_path, class:"btn btn-link" do %>
-              <div class="link">アイテム追加</div>
+              <div class="link">
+                <i class="fas fa-edit"></i> アイテム追加
+              </div>
             <% end %>
           </li>
           <li class="">
             <%= link_to items_path, class:"btn btn-link" do %>
-              <div class="link">アイテム一覧</div>
+              <div class="link">
+                <i class="fas fa-align-justify"></i> アイテム一覧
+              </div>
             <% end %>
           </li>
           <li class="">
             <%= link_to genres_path, class:"btn btn-link" do %>
-              <div class="link">ジャンル</div>
+              <div class="link">
+                <i class="fas fa-book-open"></i> ジャンル
+              </div>
             <% end %>
           </li>
           <li class="">
             <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-link" do %>
-              <div class="link">ログアウト</div>
+              <div class="link">
+                <i class="fas fa-sign-out-alt"></i> ログアウト
+              </div>
             <% end %>
           </li>
         </ul>
@@ -55,26 +62,34 @@
       <% else %>
 
         <nav class="nav navbar-left">
-          <span class="logo">
+          <span class="title">
             <%= link_to root_path do %>
-              <span class="logo">TIM</span>
+              <span class="logo">
+                <i class="fas fa-hourglass-half"></i> TIM
+              </span>
             <% end %>
           </span>
         </nav>
         <ul class="nav navbar-right">
           <li class="">
             <%= link_to new_user_registration_path, class:"btn btn-link" do %>
-              <div class="link">新規登録</div>
+              <div class="link">
+                <i class="far fa-address-card"></i> 新規登録
+              </div>
             <% end %>
           </li>
           <li class="">
             <%= link_to new_user_session_path, class:"btn btn-link" do %>
-              <div class="link">ログイン</div>
+              <div class="link">
+                <i class="fas fa-sign-in-alt"></i> ログイン
+              </div>
             <% end %>
           </li>
           <li class="">
             <%= link_to about_path, class:"btn btn-link" do %>
-              <div class="link">About</div>
+              <div class="link">
+                <i class="fas fa-question-circle"></i> About
+              </div>
             <% end %>
           </li>
         </ul>
@@ -91,7 +106,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="bg-dark">
       <div class="container-md">
         <p class="text-right"> Copyright © TIM 2020</p>
       </div>

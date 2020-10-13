@@ -4,34 +4,38 @@
   </div>
   <%= form_for(@item) do |f| %>
     <div class="col-md-5">
-    <h2>アイテム編集</h2>
-  	  <div class="item_image">
-  	  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
-  	  	fallback: "no-data.jpg", size: "300x300" %>
-  	  	<%= f.attachment_field :image %>
-  	  </div>
+    <h2>アイテム追加</h2>
+      <div class="item_image">
+        <%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
+        fallback: "no-data.jpg", size: "300x300" %>
+        <%= f.attachment_field :image %>
+      </div>
     </div>
 
     <div class="col-md-7">
-      <div class="item_name">アイテム名
-    	  <%= f.text_field :name, class:"item_field" %>
+      <div class="items name">
+        <%= f.label :アイテム名 %>
+        <%= f.text_field :name, class:"item_field" %>
       </div>
-      <div class="item_genre">ジャンル
-    	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, nclude_blanck: "選択してください" %>
+      <div class="items genre">
+        <%= f.label :ジャンル %>
+        <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
       </div>
-      <div class="item_quantity">個数
-    	  <%= f.number_field :quantity, class:"item_field" %>
+      <div class="items quantity">
+        <%= f.label :個数 %>
+        <%= f.number_field :quantity, class:"item_field" %>
       </div>
-      <div class="item_exp">期限
-    	  <%= f.date_field :exp, class:"item_field" %>
+      <div class="items exp">
+        <%= f.label :期限 %>
+        <%= f.date_field :exp, class:"item_field" %>
       </div>
-      <div class="item_memo">メモ
-    	  <%= f.text_area :memo, class:"item_field" %>
+      <div class="items memo">
+        <%= f.label :メモ %>
+        <%= f.text_area :memo, class:"memo_area" %>
       </div>
-      <div class="item_update">
-    	  <%= f.submit "変更", class:"btn btn-primary" %>
+      <div class="items actions">
+        <%= f.submit "変更", class:"btn btn-success" %>
       </div>
     </div>
   <% end %>
 </div>
-

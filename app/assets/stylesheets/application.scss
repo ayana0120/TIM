@@ -18,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;;
+  box-sizing: border-box;
  }
 clearfix::after {
   content: "";
@@ -26,18 +26,171 @@ clearfix::after {
   clear: both;
 }
 body {
-  margin-top: 53px;
+  margin-top: 40px;
+  font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
+}
+.notice {
+  margin: 20px;
+  font-size: 16px;
+  color: #03AF7A;
+}
+a {
+  font-size: 16px;
+  color: #005AFF;
+  text-decoration: none;
+  padding: 5px;
+}
+a:hover {
+  background-color:#C8C8CB;
+  text-decoration: none;
 }
 /*header*/
 .navbar {
   margin: 0;
+  padding: 0;
+}
+header {
+  .btn.btn-link {
+    padding: 0 15px;
+  }
+  a {
+  padding: 14px 15px 6px;
+  }
+}
+a:hover.btn.btn-link {
+  background-color:#C8C8CB;
+  text-decoration: none;
+  }
+.logo {
+  font-size: 30px;
+  color: #F6AA00;
+}
+.link {
+  font-size: 20px;
+  color: #F6AA00;
 }
 
 /*main*/
 .container-fluid {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 form {
   width: 100%;
+}
+.row {
+  margin: 0 50px 50px;
+}
+/*footer*/
+footer {
+  height: 30px;
+}
+.text-right {
+  color: #F6AA00;
+  margin: 0;
+  font-size: 20px;
+}
+.contents {
+  font-size: 18px;
+}
+
+/*registration*/
+.registration_new {
+  margin: 0 250px 100px;
+  display: inline-block;
+  .field {
+  margin: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  }
+  .sign_up_form {
+    width: 300px;
+    height: 30px;
+  }
+  .name {
+    .sign_up_form{
+      margin-left: 162px;
+    }
+  }
+  .email {
+    .sign_up_form{
+      margin-left: 130px;
+    }
+  }
+  .password1 {
+    .sign_up_form{
+      margin-left: 70px;
+    }
+  }
+  .password2 {
+    .sign_up_form{
+      margin-left: 130px;
+    }
+  }
+  .actions {
+    margin: 50px;
+    .btn {
+      font: 20px;
+      height: 40px;
+    }
+  }
+}
+
+/*session*/
+.session_new {
+  margin: 0 250px 100px;
+  display: inline-block;
+  a {
+  margin-bottom: 20px;
+  }
+  .field {
+  margin: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  }
+  .log_in_form {
+    width: 300px;
+    height: 30px;
+  }
+  .email {
+    .log_in_form{
+      margin-left: 130px;
+    }
+  }
+  .password1 {
+    .log_in_form{
+      margin-left: 162px;
+    }
+  }
+  .actions {
+    margin: 50px;
+    .btn {
+      font: 20px;
+      height: 40px;
+    }
+  }
+}
+.registration_path {
+  font-size: 16px;
+  color: #F6AA00;
+  margin-bottom: 50px;
+}
+
+/*ボタンの色*/
+.btn.btn-success {
+  color: #FFFFFF;
+  background-color: #03AF7A;
+}
+.btn.btn-danger {
+  color: #FFFFFF;
+  background-color: #FF4B00;
+}
+.btn.btn-primary {
+  color: #FFFFFF;
+  background-color: #005AFF;
+}
+.btn.btn-info {
+  color: #FFFFFF;
+  background-color: #4BC4FF;
 }

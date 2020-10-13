@@ -3,18 +3,78 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*users/top*/
 .top_main {
-  background-image: url(20180310_114351.jpg);
+  background-image: url(vegetables3.jpg);
   background-position: center;
   height: 350px;
   width: 100%;
+  margin: -10px 0 20px;
+  h1 {
+  	font-size: 120px;
+  	margin: 0 0 0 64px;
+  	color: #F6AA00;
+  	text-align: left;
+   	}
 }
+.site_introduction {
+  background-image: url(site_introduction.jpg);
+  height: 427px;
+  }
+.text{
+  background-color: rgba( 255,255,255, 0.8);
+  height: 250px;
+  width: 650px;
+  margin: 88.5px 0 0 80px;
+  padding-top: 83px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #F6AA00;
+  text-align: center;
+   }
+.login_form {
+  border: 2px;
+  h3 {
+  	color: #F6AA00;
+  }
+  #user_email, #user_password {
+  	width: 100%;
+  	height: 30px;
+  }
+}
+
 /*users/about*/
 .about {
   height: 350px;
 }
-.about_img {
-  background-image: url(20180310_114351.jpg);
+.about_img1 {
+  background-image: url(supermarket2.jpg);
   background-position: center;
-  height: 300px;
+  height: 350px;
+  margin-left: 10px;
   object-fit: cover;
+}
+.about_img2 {
+  background-image: url(bathgoods.jpg);
+  background-position: top;
+  height: 350px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.about_img3 {
+  background-image: url(stationery.jpg);
+  background-position: top;
+  height: 350px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+
+/*users/show*/
+.sidebar {
+  .btn {
+    margin: -4px 0 0 20px;
+  }
+}
+.search_box {
+  margin-top: 16px;
 }

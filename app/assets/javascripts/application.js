@@ -22,6 +22,6 @@ $(function(){
     reader.onload = function (e) {
         $(".image").attr('src', e.target.result);
     }
-    reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
+    reader.readAsDataURL(e.target.files[0]);
   });
 });

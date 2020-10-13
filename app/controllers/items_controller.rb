@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :show, :update, :destroy ]
+  before_action :set_search_box, only:[:index, :search]
   before_action :authenticate_user!
 
   def index
@@ -48,8 +49,6 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @q = current_user.items.ransack(params[:q])
-    @items = @q.result(distinct: true)
   end
 
   protected
@@ -64,6 +63,11 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = current_user.items.find(params[:id])
+  end
+
+  def set_search_box
+    @q = current_user.items.ransack(params[:q])
+    @items = @q.result(distinct: true)
   end
 
 end
