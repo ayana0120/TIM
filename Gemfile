@@ -71,3 +71,7 @@ gem 'ransack'
 # gem 'omniauth-google-oauth2'
 # gem 'omniauth-twitter'
 # gem 'omniauth-yahoojp'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
