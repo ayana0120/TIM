@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*users/top*/
 .top_main {
-  background-image: image-url(vegetables3.jpg);
+  background-image: image-url("vegetables3.jpg");
   background-position: center;
   height: 350px;
   width: 100%;
@@ -16,7 +16,7 @@
    	}
 }
 .site_introduction {
-  background-image: image-url(site_introduction.jpg);
+  background-image: image-url("site_introduction.jpg");
   height: 427px;
   }
 .text{
@@ -48,21 +48,21 @@
   height: 350px;
 }
 .about_img1 {
-  background-image: image-url(supermarket2.jpg);
+  background-image: image-url("supermarket2.jpg");
   background-position: center;
   height: 350px;
   margin-left: 10px;
   object-fit: cover;
 }
 .about_img2 {
-  background-image: image-url(bathgoods.jpg);
+  background-image: image-url("bathgoods.jpg");
   background-position: top;
   height: 350px;
   margin-right: 10px;
   object-fit: cover;
 }
 .about_img3 {
-  background-image: image-url(stationery.jpg);
+  background-image: image-url("stationery.jpg");
   background-position: top;
   height: 350px;
   margin-left: 10px;
