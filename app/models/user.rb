@@ -12,22 +12,12 @@ class User < ApplicationRecord
 
   protected
 
-  def self.find_for_ouath(auth)
-  	user = User.where(uid: auth.uid, provider: auth.provider).first
-
-  	unless user
-  	  user = User.create(
-  	  	name: auth.info.name,
-  	  	uid: auth.uid,
-  	  	provider: auth.provider,
-  	  	email: User.dummy_email(auth),
-  	  	passsword: Devise.friendy_token[0,20]
-  		)
+  def self.form_omniauth(auth)
+  	where(uid: auth.uid, provider: auth.provider).firs_or_create do |user|
+  	  	user.name = auth.info.name
+  	  	user.id = auth.uid
+        user.email = auth.info.email
+  	  	user.passsword = Devise.friendy_token[0,20]
   	end
-  	user
   end
-
-  	def self.dummy_email(auth)
-  	  "#{auth.uid}-#{auth.provider}@example.com"
-  	end
 end
