@@ -1,0 +1,17 @@
+// Place all the styles related to the users/omniauth_callbacks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.twitter {
+  width: 191px;
+  height: 46px;
+  background-color: #1DA1F2;
+  margin: 0;
+  border-radius: 2px;
+  a.twitter_log_in {
+  	font-family: "Arial";
+  	font-size: 14px;
+  	color: #FFFFFF;
+  }
+  .twitter_icon {
+  }
+}

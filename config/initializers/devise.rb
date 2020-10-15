@@ -281,7 +281,7 @@ Devise.setup do |config|
     ENV["Twitter_API_KEY"],ENV["Twitter_SECRET_KEY"],scope: "email"
 
   config.omniauth :yahoojp,
-    ENV["Yahoo_CLIENT_KEY"],ENV["Yahoo_CLIENT_SECRET"],scope: "email"
+    ENV["Yahoo_CLIENT_KEY"],ENV["Yahoo_CLIENT_SECRET"],scope: "email openid"
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
