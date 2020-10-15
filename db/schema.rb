@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_10_105531) do
+ActiveRecord::Schema.define(version: 2020_10_15_102925) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.string "user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_10_10_105531) do
     t.integer "quantity", default: 1
     t.date "exp"
     t.text "memo"
-    t.integer "user_id"
+    t.string "user_id"
     t.integer "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

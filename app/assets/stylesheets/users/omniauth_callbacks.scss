@@ -1,0 +1,42 @@
+// Place all the styles related to the users/omniauth_callbacks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.twitter {
+  width: 191px;
+  height: 45px;
+  background-color: #1DA1F2;
+  margin: 0;
+  border-radius: 2px;
+  text-align: center;
+  a.twitter_log_in {
+  	font-family: "Arial";
+  	font-size: 16px;
+  	color: #FFFFFF;
+  }
+}
+.session_twitter {
+  width: 382px;
+  height: 45px;
+  background-color: #1DA1F2;
+  margin: 0;
+  border-radius: 2px;
+  text-align: center;
+  a.twitter_session_new {
+  	font-family: "Arial";
+  	font-size: 16px;
+  	color: #FFFFFF;
+  }
+}
+.session_google {
+  width: 382px;
+  height: 45px;
+  background-color: #DD5144;
+  margin: 0;
+  border-radius: 2px;
+  text-align: center;
+  a.google_session_new {
+  	font-family: "Arial";
+  	font-size: 16px;
+  	color: #FFFFFF;
+  }
+}
