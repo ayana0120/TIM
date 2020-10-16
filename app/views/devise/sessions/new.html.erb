@@ -35,13 +35,13 @@
     <!-- SNS認証 -->
       <div class="session_google">
         <%= link_to user_google_oauth2_omniauth_authorize_path, method: :get, class:"google_session_new" do %>
-          <i class="fab fa-google fa-2x"></i> Sign in with Google
+          <i class="fab fa-google fa-2x"></i><b>Sign in with Google </b>
         <% end %>
       </div>
 
       <div class="session_twitter">
         <%= link_to user_twitter_omniauth_authorize_path, method: :get, class:"twitter_session_new" do %>
-          <i class="fab fa-twitter fa-2x"></i><b> Sign in with Twitter</b>
+          <i class="fab fa-twitter fa-2x"></i><b>Sign in with Twitter</b>
         <% end %>
       </div>
 
