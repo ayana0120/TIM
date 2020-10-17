@@ -15,7 +15,6 @@
 /*items/new・edit・show*/
 .items {
   margin-top: 50px;
-  font-size: 16px;
   label {
   	margin: 0;
   }
@@ -32,7 +31,7 @@
   text-align: center;
 }
 #item_image {
-  margin: 0 auto;
+  margin: 0 97.5px;
 }
 .items.name {
   margin-top: 80px;
@@ -56,4 +55,9 @@
   width: 200px;
   margin-left: 98px;
 }
-
+.edit_delete {
+  margin-top: 50px;
+  .btn {
+  width: 125px;
+  }
+}

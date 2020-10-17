@@ -4,7 +4,7 @@
   </div>
   <%= form_for(@item) do |f| %>
     <div class="col-md-5">
-    <h2>アイテム追加</h2>
+    <h2>アイテム編集</h2>
       <div class="item_image">
         <%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
         fallback: "no-data.jpg", size: "300x300" %>
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="col-md-7">
+    <div class="col-md-6 offset-1">
       <div class="items name">
         <%= f.label :アイテム名 %>
         <%= f.text_field :name, class:"item_field" %>
