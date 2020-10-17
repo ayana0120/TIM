@@ -85,6 +85,23 @@ a:hover.btn.btn-link {
 }
 
 /*main*/
+.field_with_errors {
+  display: inline;
+}
+#error_explanation {
+  width: 694.25px;
+  color: #FF4B00;
+  h2 {
+    font-weight:  bold;
+    font-size: 20px;
+  }
+  ul {
+    font-size: 16px;
+    li {
+      margin-left: 40px;
+    }
+  }
+}
 .container-fluid {
   margin: 0;
   padding: 0;

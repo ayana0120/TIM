@@ -66,6 +66,9 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.4)
+    bullet (6.1.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.1.3)
     capybara (3.33.0)
       addressable
@@ -208,6 +211,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (5.1.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.4.4)
       actionpack (= 5.2.4.4)
       activesupport (= 5.2.4.4)
@@ -282,6 +288,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    uniform_notifier (1.13.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (3.7.0)
@@ -301,6 +308,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.6)
+  bullet
   byebug
   capybara (>= 2.15)
   chromedriver-helper
@@ -317,6 +325,7 @@ DEPENDENCIES
   omniauth-yahoojp
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.4)
+  rails-i18n
   ransack
   refile!
   refile-mini_magick
