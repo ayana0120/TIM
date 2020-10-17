@@ -19,7 +19,7 @@
         <div class="field password1">
           <%= f.label :パスワード %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上)</em>
+          <em>(<%= @minimum_password_length %>文字以上)</em>
           <% end %>
           <%= f.password_field :password, autocomplete: "new-password", class:"sign_up_form" %>
         </div>
