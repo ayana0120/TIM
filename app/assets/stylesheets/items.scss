@@ -29,9 +29,12 @@
 .item_image {
   margin-top: 20px;
   text-align: center;
+  h2 {
+    text-align: left;
+  }
 }
 #item_image {
-  margin: 0 97.5px;
+  margin-left: 44px;
 }
 .items.name {
   margin-top: 80px;
