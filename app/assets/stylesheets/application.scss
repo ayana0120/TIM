@@ -127,7 +127,7 @@ footer {
 }
 
 /*registration*/
-.registration_new {
+.registration_new, .registration_edit {
   margin: 0 250px 100px;
   display: inline-block;
   .field {
@@ -152,6 +152,11 @@ footer {
   .password1 {
     .sign_up_form{
       margin-left: 58px;
+    }
+  }
+  .password3 {
+    .sign_up_form{
+      margin-left: 106px;
     }
   }
   .actions {

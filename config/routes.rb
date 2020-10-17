@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    sessions: 'devise/sessions',
-    registrations: 'devise/registrations',
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
   root "users#top"
 
-  resources :users, only:[:show, :edit, :update, :destroy]
+  resources :users, only:[:show]
   get "/about" => "users#about"
 
   resources :items
