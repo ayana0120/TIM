@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root "users#top"
 
-  resources :users, only:[:show]
+  resources :users, only:[:show, :edit, :update, :destroy]
   get "/about" => "users#about"
 
   resources :items

@@ -68,8 +68,18 @@
   margin-left: 10px;
   object-fit: cover;
 }
+/*users/edit*/
 
 /*users/show*/
+.user_show {
+  margin: 20px 0 10px;
+  h2 {
+    display: inline;
+  }
+  .user_edit_link {
+    text-decoration: underline;
+ }
+}
 .sidebar {
   .btn {
     margin: -4px 0 0 20px;
@@ -80,4 +90,35 @@
 }
 .exp_items_index {
   padding: 0 15px;
+}
+/*users/edit*/
+.user_edit {
+  margin: 0 250px 100px;
+  display: inline-block;
+  .field {
+  margin: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  }
+  .sign_up_form {
+    width: 300px;
+    height: 30px;
+  }
+  .name, .password1 {
+    .sign_up_form{
+      margin-left: 154px;
+    }
+  }
+  .email, .password2  {
+    .sign_up_form{
+      margin-left: 122px;
+    }
+  }
+  .actions {
+    margin: 50px;
+    .btn {
+      font-size: 18px;
+      height: 40px;
+    }
+  }
 }

@@ -27,6 +27,8 @@ clearfix::after {
 }
 body {
   margin-top: 40px;
+  /*↓ゴシック体フォント*/
+  /*font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;*/
   font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
   font-size: 16px;
 }
@@ -125,25 +127,20 @@ footer {
       margin-left: 154px;
     }
   }
-  .email {
+  .email, .password2 {
     .sign_up_form{
       margin-left: 122px;
     }
   }
   .password1 {
     .sign_up_form{
-      margin-left: 50px;
-    }
-  }
-  .password2 {
-    .sign_up_form{
-      margin-left: 122px;
+      margin-left: 58px;
     }
   }
   .actions {
     margin: 50px;
     .btn {
-      font: 20px;
+      font-size: 18px;
       height: 40px;
     }
   }
@@ -178,7 +175,7 @@ footer {
   .actions {
     margin: 50px;
     .btn {
-      font: 20px;
+      font-size: 18px;
       height: 40px;
     }
   }
