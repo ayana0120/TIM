@@ -34,12 +34,6 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"sign_up_form" %>
         </div>
 
-        <div class="field password3">
-          <i>現在のパスワードを入力してください</i><br>
-          <%= f.label :現在のパスワード %>
-          <%= f.password_field :current_password, autocomplete: "current-password", class:"sign_up_form" %>
-        </div>
-
         <div class="actions col-md-4 offset-1">
           <%= f.submit " ユーザー情報更新 ", class:"btn btn-success btn-block" %>
         </div>
