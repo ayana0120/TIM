@@ -44,5 +44,7 @@
 
 	<!-- SNS認証フォーム挿入 -->
     <%= render "users/omniauth_callbacks/login" %>
+
+    <%= link_to "ゲストとしてログイン", users_guest_sign_in_path, class:"guest_login_link", method: :post %>
   </div>
 </div>

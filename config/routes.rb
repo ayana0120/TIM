@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   get "search" => "items#search"
 
   resources :genres, only:[:index, :create, :update, :destroy]
+
+  devise_scope :user do
+    post "users/guest_sign_in" => "users/sessions#new_guest"
+  end
+
 end
