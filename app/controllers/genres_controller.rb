@@ -3,7 +3,7 @@ class GenresController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @newgenre = current_user.genres.new
+    @genre = current_user.genres.new
   	@genres = current_user.genres.all
     @user = current_user
   end
@@ -13,6 +13,7 @@ class GenresController < ApplicationController
   	if @genre.save
   	  redirect_to genres_path
   	else
+      @genres = current_user.genres.all
   	  render :index
   	end
   end
@@ -21,6 +22,7 @@ class GenresController < ApplicationController
   	if @genre.update(genre_params)
   	  redirect_to genres_path
   	else
+      @genres = current_user.genres.all
   	  render :index
   	end
   end
