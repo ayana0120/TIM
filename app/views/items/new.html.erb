@@ -2,7 +2,7 @@
   <div class="col-md-12 error_message">
     <%= render 'users/error', model: @item %>
   </div>
-  <%= form_for(@item) do |f| %>
+  <%= form_with model:@item do |f| %>
     <div class="col-md-4 offset-1">
     <h2>アイテム追加</h2>
   	  <div class="item_image">
@@ -23,7 +23,7 @@
     	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
       </div>
 
-      <%= form_for(@genre) do |f| %>
+      <%= form_with model:@genre do |f| %>
         <div class="items add_genre">
           <%= f.label :ジャンル追加 %>
           <%= f.text_field :name, class:"item_field" %>
