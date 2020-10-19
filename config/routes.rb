@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :items
   get "search" => "items#search"
+  patch "quantity_decreases/:id" =>"items#quantity_decreases", as: "quantity_decreases"
+  patch "quantity_increases/:id" =>"items#quantity_increases", as: "quantity_increases"
 
   resources :genres, only:[:index, :create, :update, :destroy]
 

@@ -30,7 +30,15 @@
       	  	  <%= item.name %>
       	  	<% end %>
       	  </td>
-      	  <td><%= item.quantity %></td>
+      	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
       	  <td><%= item.exp %></td>
           <td><%= item.memo %></td>
       	  <td><%= link_to "編集", edit_item_path(item), class:"btn btn-success"  %></td>

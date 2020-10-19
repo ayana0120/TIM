@@ -29,7 +29,15 @@
   	  	  	  <%= item.name %>
   	  		<% end %>
   	  	  </td>
-	  	  <td><%= item.quantity %></td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
 	  	  <td><%= item.exp %></td>
 	  	</tr>
 	  <% end %>
@@ -85,7 +93,15 @@
   	  	  	  <%= item.name %>
   	  		<% end %>
   	  	  </td>
-	  	  <td><%= item.quantity %></td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
 	  	</tr>
 	  <% end %>
 	  </tbody>
