@@ -81,6 +81,24 @@
     text-decoration: underline;
  }
 }
+.limit_items_index {
+/*アイテム名・ジャンル名*/
+  td:nth-child(1), td:nth-child(2) {
+    width: 176px;
+  }
+/*個数・期限*/
+  td:nth-child(3), td:nth-child(4){
+    width: 120px;
+    }
+  .fa-minus-square {
+    font-size:1.5em;
+    color: #FF4B00;
+  }
+  .fa-plus-square {
+    font-size:1.5em;
+    color: #005AFF;
+  }
+}
 .sidebar {
   .btn {
     margin: -4px 0 0 20px;
@@ -91,5 +109,21 @@
 }
 .exp_items_index {
   padding: 0 15px;
+}
+.new_items_index {
+/*アイテム名・ジャンル名*/
+  td:nth-child(2), td:nth-child(3) {
+    width: 170px;
+  }
+/*個数・期限*/
+  td:nth-child(1), td:nth-child(4){
+    width: 120px;
+    }
+  .fa-minus-square {
+    color: #FF4B00;
+  }
+  .fa-plus-square {
+    color: #005AFF;
+  }
 }
 

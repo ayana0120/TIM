@@ -6,7 +6,7 @@
 	  	<i class="fas fa-edit"></i>ユーザー情報編集
 	  <% end %>
 	</div>
-	<table class="table items_index">
+	<table class="table limit_items_index">
 	　<thead class="contents">
 		<tr>
 		  <th>ジャンル</th>
@@ -29,7 +29,15 @@
   	  	  	  <%= item.name %>
   	  		<% end %>
   	  	  </td>
-	  	  <td><%= item.quantity %></td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
 	  	  <td><%= item.exp %></td>
 	  	</tr>
 	  <% end %>
@@ -61,7 +69,7 @@
   </div>
 
   <div class="col-md-6 offset-push-1">
-	<table class="table items_index">
+	<table class="table new_items_index">
 	　<thead class="contents">
 		<tr>
 		  <th>登録日時順</th>
@@ -74,7 +82,7 @@
 	  <tbody>
 	  <% @new_items.each do |item| %>
 	  	<tr>
-	  	  <td><%= item.created_at.strftime("%Y/%m/%d") %></td>
+	  	  <td><%= item.updated_at.strftime("%Y/%m/%d") %></td>
 	  	  <td>
 	  	  	<%= link_to items_path(genre_id: item.genre) do %>
               <%= item.genre.name %>
@@ -85,7 +93,15 @@
   	  	  	  <%= item.name %>
   	  		<% end %>
   	  	  </td>
-	  	  <td><%= item.quantity %></td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
 	  	</tr>
 	  <% end %>
 	  </tbody>

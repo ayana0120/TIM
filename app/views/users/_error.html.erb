@@ -1,6 +1,6 @@
 <% if model.errors.any? %>
   <div class="error">
-    <h3><%= model.errors.count %> errors prohibited this obj from being saved</h3>
+    <h3><%= model.errors.count %>件のエラーが発生したため保存されませんでした。</h3>
     <ul>
       <% model.errors.full_messages.each do |message| %>
         <li class="error-message"><%= message %></li>

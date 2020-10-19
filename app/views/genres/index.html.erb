@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-12 error_message">
-    <%= render 'users/error', model: @newgenre %>
+    <%= render 'users/error', model: @genre %>
   </div>
   <div class="col-md-10 offset-1">
     <h2>ジャンル一覧</h2>
-    <%= form_for(@newgenre) do |f| %>
+    <%= form_with model: @genre do |f| %>
     <table class="table genres_new">
       <thead class="contents">
       	<tr>
