@@ -11,6 +11,7 @@
     	  <th>アイテム名</th>
     	  <th>個数</th>
     	  <th>期限</th>
+        <th>メモ</th>
     	  <th></th>
     	  <th></th>
     	</tr>
@@ -31,6 +32,7 @@
       	  </td>
       	  <td><%= item.quantity %></td>
       	  <td><%= item.exp %></td>
+          <td><%= item.memo %></td>
       	  <td><%= link_to "編集", edit_item_path(item), class:"btn btn-success"  %></td>
       	  <td><%= link_to "削除", item_path(item), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
       	</tr>

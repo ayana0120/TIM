@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       @genre = current_user.genres.find(params[:genre_id])
       @items - current_user.genres.items.all.includes(:genre)
     else
-      @new_items = current_user.items.all.includes(:genre).order(id: :desc)
+      @new_items = current_user.items.all.includes(:genre).order(id: :desc).limit(5)
     end
     @q = current_user.items.ransack(params[:q])
     @items = @q.result(distinct: true)
