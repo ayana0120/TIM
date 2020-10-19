@@ -8,6 +8,12 @@ class User < ApplicationRecord
   has_many :items
   has_many :genres
 
+  def self.guest
+    find_or_create_by!(email: "guest@example.com") do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
   def self.form_omniauth(auth)
   	where(uid: auth.uid, provider: auth.provider).first_or_create do |user|
       user.email = auth.info.email

@@ -1,15 +1,15 @@
 class Users::OmniauthCallbacksController < ApplicationController
 
   def twitter
-  	callback_for(:twitter)
+    callback_for(:twitter)
   end
 
   def google_oauth2
-  	callback_for(:google)
+    callback_for(:google)
   end
 
   def yahoojp
-  	callback_for(:yahoo)
+    callback_for(:yahoo)
   end
 
   def callback_for(provider)

@@ -2,7 +2,7 @@
   <div class="col-md-10 offset-1">
   	<div class="user_show">
 	  <h2>マイページ</h2>
-	  <%= link_to edit_user_path(@user), class:"user_edit_link" do %>
+	  <%= link_to edit_user_registration_path, class:"user_edit_link" do %>
 	  	<i class="fas fa-edit"></i>ユーザー情報編集
 	  <% end %>
 	</div>
@@ -12,7 +12,7 @@
 		  <th>ジャンル</th>
 		  <th>アイテム名</th>
 		  <th>個数</th>
-		  <th>期限</th>
+		  <th>期限が近い順</th>
 		</tr>
 	  </thead>
 
@@ -64,16 +64,17 @@
 	<table class="table items_index">
 	　<thead class="contents">
 		<tr>
+		  <th>登録日時順</th>
 		  <th>ジャンル</th>
 		  <th>アイテム名</th>
 		  <th>個数</th>
-		  <th>期限</th>
 		</tr>
 	  </thead>
 
 	  <tbody>
 	  <% @new_items.each do |item| %>
 	  	<tr>
+	  	  <td><%= item.created_at.strftime("%Y/%m/%d") %></td>
 	  	  <td>
 	  	  	<%= link_to items_path(genre_id: item.genre) do %>
               <%= item.genre.name %>
@@ -85,7 +86,6 @@
   	  		<% end %>
   	  	  </td>
 	  	  <td><%= item.quantity %></td>
-	  	  <td><%= item.exp %></td>
 	  	</tr>
 	  <% end %>
 	  </tbody>

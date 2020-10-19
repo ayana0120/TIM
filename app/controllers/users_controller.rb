@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:top, :about]
-  before_action :set_user, only:[:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show]
 
   def show
+    @user = current_user
     @limit_items = current_user.items.limit(5).order("exp IS NULL ASC").includes(:genre)
     @genres = current_user.genres.all
     if params[:genre_id]
@@ -15,25 +15,6 @@ class UsersController < ApplicationController
     @items = @q.result(distinct: true)
   end
 
-  def edit
-  end
-
-  def update
-    if @user.update(user_params)
-      redirect_to user_path(@user)
-    else
-      render :end
-    end
-  end
-
-  def destroy
-    if @user.destroy
-      redirect_to root_path
-    else
-      render :edit
-    end
-  end
-
   def top
     @resource = User.new
   end
@@ -44,14 +25,11 @@ class UsersController < ApplicationController
   protected
 
   def genre_params
-  	params.require(:user).permit(:name)
+    params.require(:user).permit(:name)
   end
 
   def search_params
     params.require(:q).permit(:name_cont)
   end
 
-  def set_user
-    @user = current_user
-  end
 end
