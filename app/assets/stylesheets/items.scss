@@ -53,7 +53,7 @@
   }
 }
 #item_image {
-  margin-left: 44px;
+  margin-left: 42px;
 }
 .items.name {
   margin-top: 80px;
@@ -66,6 +66,16 @@
 .genre {
   .item_field {
     margin-left: 66px;
+  }
+}
+.add_genre {
+  .item_field {
+    margin-left: 34px;
+  }
+  .btn {
+    width: 60px;
+    float: right;
+    margin-right: 80px;
   }
 }
 .quantity, .exp {

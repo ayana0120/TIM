@@ -17,10 +17,20 @@
         <%= f.label :アイテム名 %>
     	  <%= f.text_field :name, class:"item_field" %>
       </div>
+
       <div class="items genre">
         <%= f.label :ジャンル %>
     	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
       </div>
+
+      <%= form_for(@genre) do |f| %>
+        <div class="items add_genre">
+          <%= f.label :ジャンル追加 %>
+          <%= f.text_field :name, class:"item_field" %>
+          <%= f.submit "追加", class: "btn btn-primary", formaction:genres_path(@genre) %></td>
+        </div>
+      <% end %>
+
       <div class="items quantity">
         <%= f.label :個数 %>
     	  <%= f.number_field :quantity, class:"item_field" %>

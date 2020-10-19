@@ -217,5 +217,6 @@ ja:
         name: アイテム名
         quantity: 個数
         exp: 期限
+        genre: ジャンル
       genre:
         name: ジャンル名
