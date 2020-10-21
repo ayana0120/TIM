@@ -49,6 +49,13 @@
 /*users/about*/
 .about {
   height: 350px;
+  h3 {
+    margin-bottom: 30px;
+  }
+  p {
+    text-indent: 1em;
+    line-height: 40px
+  }
 }
 .about_img1 {
   background-image: image-url("supermarket2.jpg");
