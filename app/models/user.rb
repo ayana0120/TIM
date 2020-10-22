@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :items, dependent: :delete_all
   has_many :genres, dependent: :delete_all
+  has_many :notifications
 
   def self.guest
     find_or_create_by!(email: "guest@example.com") do |user|

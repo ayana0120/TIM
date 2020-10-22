@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=utf-8">
+  <style type="text/css" >
+  </style>
+</head>
+<body>
+  <h2>
+	============<br>
+	<%= @user.name %>様<br>
+	============
+  </h2>
+  <br>
+  <p>
+  	いつもご利用ありがとうございます。<br>
+	<%= @user.items.name %>の期限切れ3日前を<br>
+	お知らせいたします。<br>
+	<br>
+	マイページ :<%= @url %>
+	<br>
+  </p>
+</body>
