@@ -20,14 +20,15 @@
 
       <div class="items genre">
         <%= f.label :ジャンル %>
-    	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
+    	  <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {prompt: "ジャンルを選択"}, class:"item_field" %>
       </div>
 
       <%= form_with model:@genre do |f| %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class="items add_genre">
           <%= f.label :ジャンル追加 %>
           <%= f.text_field :name, class:"item_field" %>
-          <%= f.submit "追加", class: "btn btn-primary", formaction:genres_path(@genre) %></td>
+          <%= f.submit "追加", class: "btn btn-primary", formaction: genres_path(@genre) %></td>
         </div>
       <% end %>
 
@@ -44,7 +45,7 @@
     	  <%= f.text_area :memo, class:"memo_area" %>
       </div>
       <div class="items actions">
-    	  <%= f.submit "追加", class:"btn btn-primary" %>
+    	  <%= f.submit "追加", class:"btn btn-primary", formaction: items_path(@item) %>
       </div>
     </div>
   <% end %>

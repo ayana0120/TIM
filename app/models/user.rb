@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[yahoojp twitter google_oauth2]
 
-  has_many :items
-  has_many :genres
+  has_many :items, dependent: :delete_all
+  has_many :genres, dependent: :delete_all
 
   def self.guest
     find_or_create_by!(email: "guest@example.com") do |user|
