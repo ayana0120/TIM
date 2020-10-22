@@ -5,8 +5,9 @@ class NotificationMailer < ApplicationMailer
   #
   #   en.notification_mailer.warning.subject
   #
-  def warning(user)
+  def warning(user, item)
     @user = user
+    @item = item
     @url = "http://localhost:3000/users/#{@user.id}"
     mail to: @user.email,
          subject: "期限の3日前をお知らせします"
@@ -17,8 +18,9 @@ class NotificationMailer < ApplicationMailer
   #
   #   en.notification_mailer.expired.subject
   #
-  def expired(user)
+  def expired(user, item)
     @user = user
+    @item = item
     @url = "http://localhost:3000/users/#{@user.id}"
     mail to: @user.email,
          subject: "期限をお知らせします"

@@ -6,12 +6,12 @@ namespace :task do
 
   	items.each do |item|
   	  @user = item.user
-  	  if today + 3 == item.exp
+  	  if today.since(3.days).to_date == item.exp
   	  	Notification.create(item_id: @item, user_id: @user, action: "warning")
-  	  	NotificationMailer.warning(@user).deliver_now
+  	  	NotificationMailer.warning(@user, item).deliver_now
   	  elsif today == item.exp
-  	  	item.notifications.update(item_id: @item, user_id: @user, action: "expired")
-  	  	NotificationMailer.expired(@user).deliver_now
+  	  	item.notifications.update(action: "expired")
+  	  	NotificationMailer.expired(@user, item).deliver_now
   	  end
   	end
   end
