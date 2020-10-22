@@ -13,7 +13,7 @@ class GenresController < ApplicationController
     @new_genre = current_user.genres.find_by(name: @genre.name)
     if @new_genre.present? &&
       @new_genre.name == @genre.name
-      flash[:notice] = "すでに存在するジャンルです"
+      flash[:alert] = "すでに存在するジャンルです"
       redirect_back fallback_location: root_path
     else
     	if @genre.save
@@ -26,11 +26,18 @@ class GenresController < ApplicationController
   end
 
   def update
-  	if @genre.update(genre_params)
-  	  redirect_to genres_path
+    @add_genre = current_user.genres.find_by(name: @genre.name)
+    if @add_genre.present? &&
+      @add_genre.name == @genre.name
+      flash[:alert] = "すでに存在するジャンルです"
+      redirect_back fallback_location: root_path
   	else
-      @genres = current_user.genres.all
-  	  render :index
+      if @genre.update(name: @add_genre.name)
+  	    redirect_to genres_path
+    	else
+        @genres = current_user.genres.all
+    	  render :index
+      end
   	end
   end
 
