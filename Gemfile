@@ -63,17 +63,25 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+# 画像投稿
 gem 'refile', require: 'refile/rails', github: 'manfe/refile'
 gem 'refile-mini_magick'
+# 検索機能
 gem 'ransack'
+# 日本語化
 gem 'rails-i18n'
+# N+1問題検証
 gem 'bullet'
 # SNS認証関連
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-yahoojp'
+# 環境変数
 gem 'dotenv-rails'
+# バッチ処理
+gem 'whenever', require: false
+
 group :production do
   gem 'mysql2'
 end
