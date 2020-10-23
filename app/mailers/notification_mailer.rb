@@ -8,7 +8,7 @@ class NotificationMailer < ApplicationMailer
   def warning(user, item)
     @user = user
     @item = item
-    @url = "http://localhost:3000/users/#{@user.id}"
+    @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
     mail to: @user.email,
          subject: "期限の3日前をお知らせします"
   end
@@ -21,7 +21,7 @@ class NotificationMailer < ApplicationMailer
   def expired(user, item)
     @user = user
     @item = item
-    @url = "http://localhost:3000/users/#{@user.id}"
+    @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
     mail to: @user.email,
          subject: "期限をお知らせします"
   end
