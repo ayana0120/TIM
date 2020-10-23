@@ -12,7 +12,6 @@ set :repo_url, "git@github.com:ayana0120/TIM.git"
 set :deploy_to, "/home/ec2-user/TIM"
 set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
-set :whenever_roles,        ->{ :app }
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
