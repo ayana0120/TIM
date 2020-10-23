@@ -1,26 +1,28 @@
-class RegistrationMailer < ApplicationMailer
+class NotificationMailer < ApplicationMailer
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.registration_mailer.send_when_new.subject
+  #   en.notification_mailer.warning.subject
   #
-  def send_when_new(user)
+  def warning(user, item)
     @user = user
+    @item = item
     @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
     mail to: @user.email,
-         subject: "会員登録が完了しました"
+         subject: "期限の3日前をお知らせします"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.registration_mailer.send_when_update.subject
+  #   en.notification_mailer.expired.subject
   #
-  def send_when_update(user)
+  def expired(user, item)
     @user = user
+    @item = item
     @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
     mail to: @user.email,
-         subject: "会員情報を変更しました"
+         subject: "期限をお知らせします"
   end
 end
