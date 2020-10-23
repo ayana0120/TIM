@@ -1,3 +1,4 @@
+
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
@@ -8,8 +9,8 @@ set :repo_url, "git@github.com:ayana0120/TIM.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/ec2-user/TIM"
-set :rbenv_ruby, "2.5.7"
+set :deploy_to, "/home/ec2-user/アプリケーション名"
+set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
 set :whenever_roles,        ->{ :app }
 # Default value for :format is :airbrussh.
