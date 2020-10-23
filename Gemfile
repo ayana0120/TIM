@@ -89,6 +89,7 @@ gem 'capistrano3-puma'
 gem 'capistrano-rbenv'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
+
 group :production do
   gem 'mysql2'
 end
