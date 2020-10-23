@@ -85,3 +85,8 @@ gem 'whenever', require: false
 group :production do
   gem 'mysql2'
 end
+# capistrano
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano3-puma'
+gem 'capistrano-rbenv'
