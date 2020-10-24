@@ -10,7 +10,7 @@ namespace :task do
   	  	Notification.create(item_id: @item, user_id: @user, action: "warning")
   	  	NotificationMailer.warning(@user, item).deliver_now
   	  elsif today == item.exp
-  	  	item.notifications.update(action: "expired")
+  	  	item.notifications.update(item_id: @item, user_id: @user, action: "expired")
   	  	NotificationMailer.expired(@user, item).deliver_now
   	  end
   	end
