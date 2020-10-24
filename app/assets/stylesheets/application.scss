@@ -26,6 +26,7 @@ clearfix::after {
   clear: both;
 }
 body {
+  margin-top: 40px;
   /*↓ゴシック体フォント*/
   /*font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;*/
   font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
@@ -64,35 +65,30 @@ a:hover {
   background-color:#C8C8CB;
   text-decoration: none;
 }
-/*ヘッダー*/
+/*header*/
 .navbar {
   margin: 0;
   padding: 0;
-  border-radius: 0px;
-  position: fixed;
-  min-height: 50px;
-  border: 0px;
 }
-nav {
+header {
   .btn.btn-link {
     padding: 0 15px;
   }
-  a:hover.btn.btn-link {
-    background-color:#C8C8CB;
-    text-decoration: none;
+  a {
+  padding: 14px 15px 6px;
   }
-  .navbar-brand {
-    padding-top: 11px;
-    margin: 0;
-    .logo {
-      font-size: 30px;
-      color: #F6AA00;
-    }
+}
+a:hover.btn.btn-link {
+  background-color:#C8C8CB;
+  text-decoration: none;
   }
-  .nav-link {
-    font-size: 20px;
-    color: #F6AA00;
-  }
+.logo {
+  font-size: 30px;
+  color: #F6AA00;
+}
+.link {
+  font-size: 20px;
+  color: #F6AA00;
 }
 
 /*main*/
@@ -103,7 +99,7 @@ nav {
   width: 694.25px;
   color: #FF4B00;
   h2 {
-    font-weight: bold;
+    font-weight:  bold;
     font-size: 20px;
   }
   ul {
@@ -114,7 +110,7 @@ nav {
   }
 }
 .container-fluid {
-  margin: 50px 0 0 ;
+  margin: 0;
   padding: 0;
   width: 100%;
 }
@@ -122,7 +118,7 @@ form {
   width: 100%;
 }
 .row {
-  margin: 0px 50px 50px;
+  margin: 0 50px 50px;
 }
 /*footer*/
 footer {
@@ -139,8 +135,7 @@ footer {
 
 /*registration*/
 .registration_new, .registration_edit {
-  margin: 0 250px 100px;
-  display: inline-block;
+  margin: 0 auto 100px;
   .field {
   margin: 50px;
   padding-left: 50px;
@@ -149,28 +144,15 @@ footer {
   .sign_up_form {
     width: 300px;
     height: 30px;
+    float: right;
   }
   .name {
     .sign_up_form{
       margin-left: 154px;
     }
   }
-  .email, .password2 {
-    .sign_up_form{
-      margin-left: 122px;
-    }
-  }
-  .password1 {
-    .sign_up_form{
-      margin-left: 58px;
-    }
-  }
-  .password3 {
-    .sign_up_form{
-      margin-left: 106px;
-    }
-  }
   .actions {
+    text-align: center;
     margin: 50px;
     .btn {
       font-size: 18px;
@@ -181,8 +163,7 @@ footer {
 
 /*session*/
 .session_new {
-  margin: 0 250px 100px;
-  display: inline-block;
+  margin: 0 auto 100px;
   a {
   margin-bottom: 20px;
   }
@@ -194,29 +175,22 @@ footer {
   .log_in_form {
     width: 300px;
     height: 30px;
-  }
-  .email {
-    .log_in_form{
-      margin-left: 130px;
-    }
-  }
-  .password1 {
-    .log_in_form{
-      margin-left: 162px;
-    }
+    float: right;
   }
   .actions {
-    margin: 50px;
+    margin: 50px 0 0;
     .btn {
       font-size: 18px;
       height: 40px;
     }
   }
 }
-.registration_path {
-  font-size: 16px;
-  color: #F6AA00;
-  margin-bottom: 50px;
+.remember_password_path {
+  margin-top: 20px;
+}
+.session_sns_login {
+  margin-top: 30px;
+  margin-left: 5%;
 }
 
 /*ボタンの色*/

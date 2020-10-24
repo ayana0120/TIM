@@ -9,17 +9,25 @@
   }
 }
 .items_index {
-/*アイテム名・ジャンル名*/
+/*アイテム名・ジャンル名・メモ*/
   td:nth-child(1), td:nth-child(2) {
-    width: 208px;
+    width: 20%;
   }
-/*個数・期限*/
-  td:nth-child(3), td:nth-child(4){
-    width: 120px;
-    }
+/*個数*/
+  td:nth-child(3) {
+    width: 16%;
+  }
+/*期限*/
+  td:nth-child(4){
+    width: 11%;
+  }
+/*メモ*/
+  td:nth-child(5) {
+    width: 19%;
+  }
 /*編集・削除ボタン*/
   td:nth-child(6), td:nth-child(7) {
-    width: 70px;
+    width: 7%;
   }
   .fa-minus-square {
     font-size:1.5em;
@@ -53,12 +61,11 @@
   }
 }
 #item_image {
-  margin-left: 42px;
-}
-.items.name {
-  margin-top: 80px;
+  margin: 0 auto;
+  padding-right: 24px;
 }
 .name {
+  margin-top: 80px;
   .item_field {
     margin-left: 50px;
   }
@@ -74,8 +81,6 @@
   }
   .btn {
     width: 60px;
-    float: right;
-    margin-right: 80px;
   }
 }
 .quantity, .exp {
@@ -91,5 +96,24 @@
   margin-top: 50px;
   .btn {
   width: 125px;
+  }
+}
+
+  /*このページでのレスポンシブ対応*/
+@media screen and (max-width:992px){
+  .items_form {
+    text-align: center;
+  }
+  .add_genre {
+    label {
+      padding-left: 68px;
+    }
+    .item_field {
+      margin-left: 34px;
+    }
+  }
+  .items_show_bottom {
+    max-width: 300px;
+    margin: 0 auto;
   }
 }

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6 offset-3">
     <div class="registration_edit">
       <h2>ユーザー情報変更</h2>
 
@@ -34,12 +34,9 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"sign_up_form" %>
         </div>
 
-        <div class="actions col-md-4 offset-1">
-          <%= f.submit " ユーザー情報更新 ", class:"btn btn-success btn-block" %>
-        </div>
-
-        <div class="actions col-md-4 offset-1">
-          <%= link_to" ユーザー情報削除 ", user_registration_path, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger btn-block", method: :delete  %>
+        <div class="actions">
+          <%= f.submit " ユーザー情報更新 ", class:"btn btn-success" %>
+          <%= link_to" ユーザー情報削除 ", user_registration_path, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger", method: :delete  %>
         </div>
       <% end %>
 
