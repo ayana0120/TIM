@@ -2,12 +2,16 @@
   <div class="col-md-12 error_message">
     <%= render 'users/error', model: @item %>
   </div>
-  <%= form_with model:@item, local: true do |f| %>
+</div>
+
+
+<%= form_with model:@item, local: true do |f| %>
+  <div class="row">
     <div class="col-lg-4 offset-lg-1 col-md-12">
     <h2>アイテム追加</h2>
   	  <div class="item_image">
   	  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
-  	  	fallback: "no-data.jpg", size: "300x300" %>
+  	  	fallback: "no-data.jpg", size: "300x300" %><br>
   	  	<%= f.attachment_field :image %>
   	  </div>
     </div>
