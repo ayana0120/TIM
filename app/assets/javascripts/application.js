@@ -28,3 +28,9 @@ $(document).on('turbolinks:load', function() {
     });
   });
 });
+
+$(document).on('click',function(e) {
+   if(!$(e.target).closest('#navbarhamburger').length) {
+     $('.navbar-collapse').collapse('hide');
+   }
+});
