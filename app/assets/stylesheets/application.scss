@@ -138,18 +138,14 @@ footer {
   margin: 0 auto 100px;
   .field {
   margin: 50px;
-  padding-left: 50px;
-  font-size: 16px;
+  }
+  label {
+    text-align: left;
   }
   .sign_up_form {
     width: 300px;
     height: 30px;
     float: right;
-  }
-  .name {
-    .sign_up_form{
-      margin-left: 154px;
-    }
   }
   .actions {
     text-align: center;
@@ -169,8 +165,9 @@ footer {
   }
   .field {
   margin: 50px;
-  padding-left: 50px;
-  font-size: 16px;
+  }
+  label {
+    text-align: left;
   }
   .log_in_form {
     width: 300px;
