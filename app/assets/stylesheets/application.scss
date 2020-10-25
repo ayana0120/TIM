@@ -43,7 +43,7 @@ body {
     padding-right: 0px;
 }*/
 .notice {
-  margin: 20px 20px 0;
+  margin: 0 20px;
   font-size: 18px;
   color: #03AF7A;
 }
@@ -53,6 +53,9 @@ body {
   margin: 20px;
   border: 0px ;
   border-radius: 0px;
+}
+.form {
+  margin-top: -50px;
 }
 a {
   font-size: 16px;
@@ -76,8 +79,9 @@ a:hover {
 }
 .navbar {
   height: 60px;
+  padding: 0 100px;
   .btn.btn-link {
-    padding: 0 15px;
+    padding: 0 1px;
   }
 }
 a:hover.btn.btn-link {
@@ -85,18 +89,31 @@ a:hover.btn.btn-link {
   text-decoration: none;
   }
 .navbar-brand {
-  padding-top: 11px;
   margin: 0;
+  padding: 5px 0 0;
   .logo {
     font-size: 30px;
     color: #F6AA00;
   }
 }
 .nav-link {
-  font-size: 20px;
+  font-size: 18px;
   color: #F6AA00;
 }
 
+  /*このページでのレスポンシブ対応*/
+@media screen and (max-width:992px){
+  .navbar-collapse {
+    background-color: #343A40;
+    margin-top: 3px;
+  }
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246,170,0,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler{
+  border-color: #F6AA00;
+}
 /*main*/
 .field_with_errors {
   display: inline;
@@ -105,7 +122,7 @@ a:hover.btn.btn-link {
   width: 694.25px;
   color: #FF4B00;
   h2 {
-    font-weight:  bold;
+    font-weight: bold;
     font-size: 20px;
   }
   ul {
@@ -116,7 +133,7 @@ a:hover.btn.btn-link {
   }
 }
 .container-fluid {
-  margin: 60px 0 0;
+  margin: 80px 0 0;
   padding: 0;
   width: 100%;
 }
@@ -134,9 +151,7 @@ footer {
   color: #F6AA00;
   margin: 0;
   font-size: 20px;
-}
-.contents {
-  font-size: 18px;
+  padding-right: 100px;
 }
 
 /*registration*/
