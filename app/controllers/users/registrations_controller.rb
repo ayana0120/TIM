@@ -10,7 +10,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    RegistrationMailer.send_when_new(@user).deliver_now
   end
 
   # GET /resource/edit
@@ -21,7 +20,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # PUT /resource
   def update
     super
-    RegistrationMailer.send_when_update(@user).deliver_now
   end
 
   def after_update_path_for(resource)

@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
 * {
   margin: 0;
@@ -25,8 +24,8 @@ clearfix::after {
   display: block;
   clear: both;
 }
+/*共通設定*/
 body {
-  margin-top: 40px;
   /*↓ゴシック体フォント*/
   /*font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;*/
   font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
@@ -44,7 +43,7 @@ body {
     padding-right: 0px;
 }*/
 .notice {
-  margin: 20px;
+  margin: 0 20px;
   font-size: 18px;
   color: #03AF7A;
 }
@@ -54,6 +53,9 @@ body {
   margin: 20px;
   border: 0px ;
   border-radius: 0px;
+}
+.form {
+  margin-top: -50px;
 }
 a {
   font-size: 16px;
@@ -65,32 +67,53 @@ a:hover {
   background-color:#C8C8CB;
   text-decoration: none;
 }
-/*header*/
+
+/*ヘッダー*/
 .navbar {
   margin: 0;
   padding: 0;
+  border-radius: 0px;
+  position: fixed;
+  min-height: 50px;
+  border: 0px;
 }
-header {
+.navbar {
+  height: 60px;
+  padding: 0 100px;
   .btn.btn-link {
-    padding: 0 15px;
-  }
-  a {
-  padding: 14px 15px 6px;
+    padding: 0 1px;
   }
 }
 a:hover.btn.btn-link {
   background-color:#C8C8CB;
   text-decoration: none;
   }
-.logo {
+.navbar-brand {
+  margin: 0;
   font-size: 30px;
-  color: #F6AA00;
+  .logo {
+    font-size: 30px;
+    color: #F6AA00;
+  }
 }
-.link {
-  font-size: 20px;
+.nav-link {
+  font-size: 18px;
   color: #F6AA00;
 }
 
+  /*このページでのレスポンシブ対応*/
+@media screen and (max-width:992px){
+  .navbar-collapse {
+    background-color: #343A40;
+    margin-top: 3px;
+  }
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246,170,0,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-toggler{
+  border-color: #F6AA00;
+}
 /*main*/
 .field_with_errors {
   display: inline;
@@ -99,7 +122,7 @@ a:hover.btn.btn-link {
   width: 694.25px;
   color: #FF4B00;
   h2 {
-    font-weight:  bold;
+    font-weight: bold;
     font-size: 20px;
   }
   ul {
@@ -110,7 +133,7 @@ a:hover.btn.btn-link {
   }
 }
 .container-fluid {
-  margin: 0;
+  margin: 80px 0 0;
   padding: 0;
   width: 100%;
 }
@@ -128,45 +151,25 @@ footer {
   color: #F6AA00;
   margin: 0;
   font-size: 20px;
-}
-.contents {
-  font-size: 18px;
+  padding-right: 100px;
 }
 
 /*registration*/
 .registration_new, .registration_edit {
-  margin: 0 250px 100px;
-  display: inline-block;
+  margin: 0 auto 100px;
   .field {
   margin: 50px;
-  padding-left: 50px;
-  font-size: 16px;
+  }
+  label {
+    text-align: left;
   }
   .sign_up_form {
     width: 300px;
     height: 30px;
-  }
-  .name {
-    .sign_up_form{
-      margin-left: 154px;
-    }
-  }
-  .email, .password2 {
-    .sign_up_form{
-      margin-left: 122px;
-    }
-  }
-  .password1 {
-    .sign_up_form{
-      margin-left: 58px;
-    }
-  }
-  .password3 {
-    .sign_up_form{
-      margin-left: 106px;
-    }
+    float: right;
   }
   .actions {
+    text-align: center;
     margin: 50px;
     .btn {
       font-size: 18px;
@@ -177,42 +180,35 @@ footer {
 
 /*session*/
 .session_new {
-  margin: 0 250px 100px;
-  display: inline-block;
+  margin: 0 auto 100px;
   a {
   margin-bottom: 20px;
   }
   .field {
   margin: 50px;
-  padding-left: 50px;
-  font-size: 16px;
+  }
+  label {
+    text-align: left;
   }
   .log_in_form {
     width: 300px;
     height: 30px;
-  }
-  .email {
-    .log_in_form{
-      margin-left: 130px;
-    }
-  }
-  .password1 {
-    .log_in_form{
-      margin-left: 162px;
-    }
+    float: right;
   }
   .actions {
-    margin: 50px;
+    margin: 50px 0 0;
     .btn {
       font-size: 18px;
       height: 40px;
     }
   }
 }
-.registration_path {
-  font-size: 16px;
-  color: #F6AA00;
-  margin-bottom: 50px;
+.remember_password_path {
+  margin-top: 20px;
+}
+.session_sns_login {
+  margin-top: 30px;
+  margin-left: 5%;
 }
 
 /*ボタンの色*/

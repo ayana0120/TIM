@@ -2,7 +2,7 @@
   <h1>TIM</h1>
 </div>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-lg-8 com-md-12">
     <div class="site_introduction">
       <div class="text">
         <p>お家にある日用品や食品を管理するためのサイトです。<br>
@@ -11,10 +11,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-lg-4 col-md-12">
     <div class="login_form">
     <h3>ログイン</h3>
-    <%= form_for(@resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
       <div class="field">
         <%= f.label :メールアドレス %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -43,8 +43,10 @@
     </div>
 
 	<!-- SNS認証フォーム挿入 -->
-    <%= render "users/omniauth_callbacks/login" %>
+    <div class="sns_login">
+      <%= render "users/omniauth_callbacks/login" %>
 
     <%= link_to "ゲストとしてログイン", users_guest_sign_in_path, class:"guest_login_link", method: :post %>
+    </div>
   </div>
 </div>

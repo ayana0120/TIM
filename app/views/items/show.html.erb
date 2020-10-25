@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-4 offset-1">
+  <div class="col-lg-4 offset-lg-1 col-md-12">
     <div class="item_image">
     <h2>アイテム情報</h2>
     	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="col-md-5 offset-2">
+  <div class="col-lg-6 offset-lg-1 col-md-12 items_show_bottom">
     <div class="items name"><b>アイテム名</b>
       <span class="item_field">
     	  <%= @item.name %>

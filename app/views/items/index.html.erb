@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-10 offset-1">
+  <div class="col-md-12">
     <h2>アイテム一覧</h2>
     <span class="items_search_box">
       <%= render "items/search_box" %>
@@ -7,13 +7,13 @@
     <table class="table items_index">
     　<thead class="contents">
     	<tr>
-    	  <th>ジャンル</th>
-    	  <th>アイテム名</th>
-    	  <th>個数</th>
-    	  <th>期限</th>
-        <th>メモ</th>
-    	  <th></th>
-    	  <th></th>
+    	  <th class="border-top-0">ジャンル</th>
+    	  <th class="border-top-0">アイテム名</th>
+    	  <th class="border-top-0">個数</th>
+    	  <th class="border-top-0">期限</th>
+        <th class="border-top-0">メモ</th>
+    	  <th class="border-top-0"></th>
+    	  <th class="border-top-0"></th>
     	</tr>
       </thead>
 
@@ -32,11 +32,11 @@
       	  </td>
       	  <td>
             <%= link_to quantity_decreases_path(item), method: :patch do %>
-              <i class="fas fa-minus-square"></i>
+              <i class="fas fa-minus-square fa-lg"></i>
             <% end %>
-            <%= item.quantity %>
+              <%= item.quantity %>
             <%= link_to quantity_increases_path(item), method: :patch do %>
-              <i class="fas fa-plus-square"></i>
+              <i class="fas fa-plus-square fa-lg"></i>
             <% end %>
           </td>
       	  <td><%= item.exp %></td>
@@ -48,5 +48,4 @@
       </tbody>
     </table>
   </div>
-  <div class="offset-1"></div>
 </div>
