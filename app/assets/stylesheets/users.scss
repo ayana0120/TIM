@@ -19,19 +19,22 @@
   background-image: image-url("site_introduction.jpg");
   max-width: 865px;
   height: 427px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 .text{
   background-color: rgba( 255,255,255, 0.8);
   height: 250px;
-  width: 650px;
-  margin: 88.5px 0 0 80px;
-  padding-top: 83px;
-  display: inline-block;
+  width: 565px;
   font-size: 18px;
   font-weight: bold;
   line-height: 28px;
   color: #F6AA00;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
    }
 .login_form {
   border: 2px;
@@ -191,5 +194,8 @@
 @media screen and (max-width:992px) {
   .fas {
     font-size: 1.5em;
+  }
+  .item_search {
+    padding-left: 100px;
   }
 }
