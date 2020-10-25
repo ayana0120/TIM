@@ -32,11 +32,11 @@
       	  </td>
       	  <td>
             <%= link_to quantity_decreases_path(item), method: :patch do %>
-              <i class="fas fa-minus-square"></i>
+              <i class="fas fa-minus-square fa-lg"></i>
             <% end %>
-            <%= item.quantity %>
+              <%= item.quantity %>
             <%= link_to quantity_increases_path(item), method: :patch do %>
-              <i class="fas fa-plus-square"></i>
+              <i class="fas fa-plus-square fa-lg"></i>
             <% end %>
           </td>
       	  <td><%= item.exp %></td>
