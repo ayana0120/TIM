@@ -37,10 +37,3 @@ $(document).on('click',function(e) {
      $('.navbar-collapse').collapse('hide');
    }
 });
-
-// アイテム追加のジャンル追加
-$(document).ready(function() {
-  $('button#GenreSubmit').click(function() {
-    $('form').submit();
-  });
-});
