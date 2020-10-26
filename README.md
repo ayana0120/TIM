@@ -25,26 +25,26 @@
 
 ## 設計書
 
-### <a href="https://drive.google.com/file/d/1QVj0nKTxNZ69w2ivDJijmtVg-JINEU7G/view?usp=sharing">・アプリケーション詳細設計書</a>
+### <a href="https://drive.google.com/file/d/1QVj0nKTxNZ69w2ivDJijmtVg-JINEU7G/view?usp=sharing">-アプリケーション詳細設計書</a>
 
 
-### <a href="https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing">・機能一覧</a>
+### <a href="https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing">-機能一覧</a>
 -指定期間での通知機能<br>
 -統計による残量予想通知<br>
 -画像判定によるジャンル分別<br>
 
 
 
-### <a href="https://drive.google.com/file/d/1oPOvuRKuDtsICA0OxkOM21MOSedPJiDQ/view?usp=sharing">・画面遷移図</a>
+### <a href="https://drive.google.com/file/d/1oPOvuRKuDtsICA0OxkOM21MOSedPJiDQ/view?usp=sharing">-画面遷移図</a>
 
 
-### <a href="https://drive.google.com/file/d/1t2jJHTv_izCWF7o-qWSSa6D_eXTPAG3W/view?usp=sharing">・ワイヤーフレーム</a>
+### <a href="https://drive.google.com/file/d/1t2jJHTv_izCWF7o-qWSSa6D_eXTPAG3W/view?usp=sharing">-ワイヤーフレーム</a>
 
 
-### <a href="https://drive.google.com/file/d/1vp9wW0EJopWVZtWVdAmp5bpWWlpMklhr/view?usp=sharing">・ER図</a>
+### <a href="https://drive.google.com/file/d/1vp9wW0EJopWVZtWVdAmp5bpWWlpMklhr/view?usp=sharing">-ER図</a>
 
 
-### <a href="https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=sharing">・テーブル定義書</a>
+### <a href="https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=sharing">-テーブル定義書</a>
 
 <br>
 <br>
