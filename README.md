@@ -1,4 +1,4 @@
-# Time is Money
+# <a href="http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/">Time is Money</a>
 ![TIM](https://user-images.githubusercontent.com/68426355/97155615-f95d6180-17b8-11eb-9e94-271f781bd234.jpg)
 
 ## サイト概要
@@ -25,27 +25,27 @@
 
 ## 設計書
 
-### アプリケーション詳細設計書
-https://drive.google.com/file/d/1QVj0nKTxNZ69w2ivDJijmtVg-JINEU7G/view?usp=sharing
-
-### 機能一覧
-・指定期間での通知機能<br>
-・統計による残量予想通知<br>
-・画像判定によるジャンル分別<br>
-https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing
+### <a href="https://drive.google.com/file/d/1QVj0nKTxNZ69w2ivDJijmtVg-JINEU7G/view?usp=sharing">アプリケーション詳細設計書</a>
 
 
-### 画面遷移図
-https://drive.google.com/file/d/1oPOvuRKuDtsICA0OxkOM21MOSedPJiDQ/view?usp=sharing
+### <a href="https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing">機能一覧</a>
+-指定期間での通知機能<br>
+-統計による残量予想通知<br>
+-画像判定によるジャンル分別<br>
 
-### ワイヤーフレーム
-https://drive.google.com/file/d/1t2jJHTv_izCWF7o-qWSSa6D_eXTPAG3W/view?usp=sharing
 
-### ER図
-https://drive.google.com/file/d/1vp9wW0EJopWVZtWVdAmp5bpWWlpMklhr/view?usp=sharing
 
-### テーブル定義書
-https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=sharing
+### <a href="https://drive.google.com/file/d/1oPOvuRKuDtsICA0OxkOM21MOSedPJiDQ/view?usp=sharing">画面遷移図</a>
+
+
+### <a href="https://drive.google.com/file/d/1t2jJHTv_izCWF7o-qWSSa6D_eXTPAG3W/view?usp=sharing">ワイヤーフレーム</a>
+
+
+### <a href="https://drive.google.com/file/d/1vp9wW0EJopWVZtWVdAmp5bpWWlpMklhr/view?usp=sharing">ER図</a>
+
+
+### <a href="https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=sharing">テーブル定義書</a>
+
 <br>
 <br>
 
@@ -53,11 +53,11 @@ https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=shari
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語<br>
-      HTML<br>
-      CSS<br>
-      JavaScript<br>
-      Ruby 2.5.7<br>
-      SQL<br>
+  -HTML<br>
+  -CSS<br>
+  -JavaScript<br>
+  -Ruby 2.5.7<br>
+  -SQL<br>
 - フレームワーク：Ruby on Rails 5.2.4
 - JSライブラリ：jQuery
 - 仮想環境：Vagrant,VirtualBox
