@@ -156,7 +156,7 @@ footer {
 }
 
 /*registration*/
-.registration_new, .registration_edit {
+.registration_new, .registration_edit, .passwords_new {
   margin: 0 auto 50px;
   .field {
   margin: 50px;
@@ -169,6 +169,8 @@ footer {
     height: 30px;
     float: right;
   }
+}
+.registration_edit {
   .actions {
     text-align: center;
     margin: 50px;
@@ -176,6 +178,16 @@ footer {
       font-size: 18px;
       height: 40px;
       width: 180px;
+    }
+  }
+}
+.registration_edit, .passwords_new {
+  .actions {
+    text-align: center;
+    margin: 50px;
+    .btn {
+      font-size: 18px;
+      height: 40px;
     }
   }
 }
