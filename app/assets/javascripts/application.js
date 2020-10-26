@@ -17,6 +17,8 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+// 画像プレビュー機能
 $(document).on('turbolinks:load', function() {
   $(function(){
     $('#item_image').on('change', function (e) {
@@ -29,6 +31,7 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+// トグルメニュー領域外をクリック時、トグルを閉じる
 $(document).on('click',function(e) {
    if(!$(e.target).closest('#navbarhamburger').length) {
      $('.navbar-collapse').collapse('hide');

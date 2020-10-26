@@ -18,6 +18,7 @@ class Users::OmniauthCallbacksController < ApplicationController
       sign_in_and_redirect @user, event: :authentication
     else
       session["devise.#{provider}_data"] = request.env["omniauth.auth"].except("extra")
+      flash[:alert] = "登録済みメールアドレスの可能性があります"
       redirect_to new_user_registration_url
     end
   end
