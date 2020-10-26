@@ -1,4 +1,5 @@
 # Time is Money
+![TIM](https://user-images.githubusercontent.com/68426355/97155108-3412ca00-17b8-11eb-9597-f7b8cf4af94f.jpg)
 
 ## サイト概要
 お家にある日用品や食品を管理するためのサイトです。<br>
@@ -55,7 +56,7 @@ https://drive.google.com/file/d/1d-iE3rJIwc4dwUTgIYpeDdndxmOBWYIc/view?usp=shari
       HTML<br>
       CSS<br>
       JavaScript<br>
-      Ruby 2.7.1<br>
+      Ruby 2.5.7<br>
       SQL<br>
 - フレームワーク：Ruby on Rails 5.2.4
 - JSライブラリ：jQuery
