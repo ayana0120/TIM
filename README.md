@@ -1,5 +1,5 @@
 # Time is Money
-![TIM](https://user-images.githubusercontent.com/68426355/97155108-3412ca00-17b8-11eb-9597-f7b8cf4af94f.jpg)
+![TIM](https://user-images.githubusercontent.com/68426355/97155615-f95d6180-17b8-11eb-9e94-271f781bd234.jpg)
 
 ## サイト概要
 お家にある日用品や食品を管理するためのサイトです。<br>
