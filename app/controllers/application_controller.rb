@@ -6,7 +6,14 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(resource)
-      user_path(resource)
+      if @user.name.present?
+        flash[:notice] = "ログインしました"
+        user_path(resource)
+      else
+        flash[:notice] = "ユーザー名の登録をお願いします"
+        flash[:alert] = "パスワードの入力は不要です"
+        edit_user_registration_path
+      end
     end
 
     private
