@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :genres, dependent: :delete_all
   has_many :notifications
 
+  after_create :send_email_on_create
+  after_update :send_email_on_update
+
   def self.guest
     find_or_create_by!(email: "guest@example.com") do |user|
       user.password = SecureRandom.urlsafe_base64
@@ -21,4 +24,15 @@ class User < ApplicationRecord
 	  	user.password = Devise.friendly_token[0,20]
   	end
   end
+
+  private
+
+  def send_email_on_create
+    RegistrationMailer.send_when_new(self).deliver_now
+  end
+
+  def send_email_on_update
+    RegistrationMailer.send_when_update(self).deliver_now
+  end
+
 end
