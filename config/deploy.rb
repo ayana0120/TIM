@@ -13,6 +13,7 @@ set :deploy_to, "/home/ec2-user/TIM"
 set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
 set :whenever_roles,        ->{ :app }
+append :linked_dirs, "log", "public", "tmp"
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -27,7 +28,6 @@ set :whenever_roles,        ->{ :app }
 # append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "public", "tmp"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
