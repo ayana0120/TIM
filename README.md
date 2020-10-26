@@ -29,9 +29,9 @@
 
 
 ### <a href="https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing">機能一覧</a>
--指定期間での通知機能<br>
--統計による残量予想通知<br>
--画像判定によるジャンル分別<br>
+  -指定期間での通知機能<br>
+  -統計による残量予想通知<br>
+  -画像判定によるジャンル分別<br>
 
 
 
