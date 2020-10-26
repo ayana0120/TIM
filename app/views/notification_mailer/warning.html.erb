@@ -8,7 +8,11 @@
 <body>
   <h2>
 	============<br>
-	<%= @user.name %>様 <br>
+	<% if @user.name.present? %>
+    <%= @user.name %> 様<br>
+  <% else %>
+    ユーザー様 <br>
+  <% end %>
 	============
   </h2>
   <br>
