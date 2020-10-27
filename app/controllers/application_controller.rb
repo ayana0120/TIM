@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(resource)
-      if @user.name.present?
+      if resource.name.present?
         flash[:notice] = "ログインしました"
         user_path(resource)
       else
