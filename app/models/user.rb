@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :notifications
 
   after_create :send_email_on_create
-  after_update :send_email_on_update
+  after_update :send_email_on_update, if: :saved_change_to_email?
 
   def self.guest
     find_or_create_by!(email: "guest@example.com") do |user|
