@@ -1,0 +1,110 @@
+<div class="row">
+  <div class="col-lg-10 col-md-12 offset-lg-1">
+  	<div class="user_show">
+	  <h2>マイページ</h2>
+	  <%= link_to edit_user_registration_path, class:"user_edit_link" do %>
+	  	<i class="fas fa-edit"></i>ユーザー情報編集
+	  <% end %>
+	</div>
+	<table class="table limit_items_index">
+	　<thead class="contents">
+		<tr>
+		  <th class="border-top-0">ジャンル</th>
+		  <th class="border-top-0">アイテム名</th>
+		  <th class="border-top-0">個数</th>
+		  <th class="border-top-0">期限が近い順</th>
+		</tr>
+	  </thead>
+
+	  <tbody>
+	  <% @limit_items.each do |item| %>
+	  	<tr>
+	  	  <td>
+	  	  	<%= link_to items_path(genre_id: item.genre) do %>
+              <%= item.genre.name %>
+            <% end %>
+          </td>
+	  	  <td>
+	  	  	<%= link_to item_path(item) do %>
+  	  	  	  <%= item.name %>
+  	  		<% end %>
+  	  	  </td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square fa-lg"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square fa-lg"></i>
+            <% end %>
+          </td>
+	  	  <td><%= item.exp %></td>
+	  	</tr>
+	  <% end %>
+	  </tbody>
+	</table>
+  </div>
+
+  <div class="col-lg-3 col-md-10 offset-1">
+	<table class="table sidebar">
+	  <thead>
+	    <tr>
+	  	  <td  class="border-top-0">
+	  	    <%= render "items/search_box" %>
+		  </td>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<% @genres.each do |genre| %>
+		  <tr>
+		    <td>
+		      <%= link_to items_path(genre_id: genre) do %>
+		  	    <%= genre.name %>
+		  	  <% end %>
+	    	</td>
+		  </tr>
+		<% end %>
+	  </tbody>
+	</table>
+  </div>
+
+  <div class="col-lg-7 col-md-12">
+	<table class="table new_items_index">
+	　<thead class="contents">
+		<tr>
+		  <th class="border-top-0">登録日順</th>
+		  <th class="border-top-0">ジャンル</th>
+		  <th class="border-top-0">アイテム名</th>
+		  <th class="border-top-0">個数</th>
+		</tr>
+	  </thead>
+
+	  <tbody>
+	  <% @new_items.each do |item| %>
+	  	<tr>
+	  	  <td><%= item.updated_at.strftime("%Y/%m/%d") %></td>
+	  	  <td>
+	  	  	<%= link_to items_path(genre_id: item.genre) do %>
+              <%= item.genre.name %>
+            <% end %>
+          </td>
+	  	  <td>
+	  	  	<%= link_to item_path(item) do %>
+  	  	  	  <%= item.name %>
+  	  		<% end %>
+  	  	  </td>
+	  	  <td>
+            <%= link_to quantity_decreases_path(item), method: :patch do %>
+              <i class="fas fa-minus-square"></i>
+            <% end %>
+            <%= item.quantity %>
+            <%= link_to quantity_increases_path(item), method: :patch do %>
+              <i class="fas fa-plus-square"></i>
+            <% end %>
+          </td>
+	  	</tr>
+	  <% end %>
+	  </tbody>
+	</table>
+  </div>
+</div>
