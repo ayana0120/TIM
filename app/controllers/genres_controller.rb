@@ -26,19 +26,13 @@ class GenresController < ApplicationController
   end
 
   def update
-    @add_genre = current_user.genres.find_by(name: @genre.name)
-    if @add_genre.present? &&
-      @add_genre.name == @genre.name
-      flash[:alert] = "すでに存在するジャンルです"
-      redirect_back fallback_location: root_path
+    if @genre.update(genre_params)
+      flash[:notice] = "ジャンル名を変更しました"
+	    redirect_to genres_path
   	else
-      if @genre.update(name: @add_genre.name)
-  	    redirect_to genres_path
-    	else
-        @genres = current_user.genres.all
-    	  render :index
-      end
-  	end
+      @genres = current_user.genres.all
+  	  render :index
+    end
   end
 
   def destroy
