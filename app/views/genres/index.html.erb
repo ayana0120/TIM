@@ -27,20 +27,20 @@
     </table>
     <% end %>
     <% @genres.each do |genre| %>
-    <table class="table genres_index">
-      <tr>
-        <td>
-          <%= link_to items_path(genre_id: genre) do %>
-            <%= genre.name %>
-          <% end %>
-        </td>
-	  	  <%= form_for(genre) do |f| %>
-      	  <td><%= f.text_field :name %></td>
-      	  <td><%= f.submit "変更", class: "btn btn-success" %></td>
-      	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
-        <% end %>
-	    </tr>
-  	<% end %>
-    </table>
+      <%= form_with model:genre do |f| %>
+      <table class="table genres_index">
+        <tr>
+          <td>
+            <%= link_to items_path(genre_id: genre) do %>
+              <%= genre.name %>
+            <% end %>
+          </td>
+        	  <td><%= f.text_field :name %></td>
+        	  <td><%= f.submit "変更", class: "btn btn-success" %></td>
+        	  <td><%= link_to "削除", genre_path(genre), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
+  	    </tr>
+      </table>
+      <% end %>
+    <% end %>
   </div>
 </div>
