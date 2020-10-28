@@ -4,8 +4,6 @@ class Item < ApplicationRecord
   	validates :quantity
   end
 
-  validates :name, uniqueness: true, on: :update
-
   validate :name_valid?
 
   belongs_to :genre, optional: true
