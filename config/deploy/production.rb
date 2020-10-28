@@ -40,8 +40,7 @@ server '13.230.253.117', user: 'ec2-user', roles: %w{app db web}
 # Global options
 # --------------
  set :ssh_options, {
- 	keys: '~/.ssh/practice-aws.pem',
-	keys: '~/.ssh/id_rsa'
+ 	keys: '~/.ssh/practice-aws.pem'
    # keys: %w(/home/user_name/.ssh/id_rsa),
    # forward_agent: false,
    # auth_methods: %w(password)
