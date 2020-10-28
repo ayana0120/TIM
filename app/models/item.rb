@@ -4,8 +4,19 @@ class Item < ApplicationRecord
   	validates :quantity
   end
 
-  belongs_to :genre
+  validate :name_valid?
+
+  belongs_to :genre, optional: true
   belongs_to :user
   has_many :notifications
   attachment :image
+
+  private
+
+  def name_valid?
+  	if genre.nil?
+  		errors.add(:genre, "を選択してください")
+  	end
+  end
+
 end
