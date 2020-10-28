@@ -17,10 +17,12 @@ class GenresController < ApplicationController
       redirect_back fallback_location: root_path
     else
     	if @genre.save
+        flash[:notice] = "ジャンルを追加しました"
     	  redirect_back fallback_location: root_path
     	else
         @genres = current_user.genres.all
-    	  render :index
+        flash[:alert] = "ジャンル名を入力してください"
+    	  redirect_back fallback_location: root_path
     	end
     end
   end
