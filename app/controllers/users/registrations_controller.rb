@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
+  before_action :check_guest, only: [:update, :destroy]
 
   # GET /resource/sign_up
   # def new
@@ -30,7 +31,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def destroy
   #   super
   # end
-
+  def check_guest
+    if resource.email == 'guest@example.com'
+      redirect_to edit_user_registration_path
+      flash[:alert] = 'ゲストユーザーの変更・削除はできません。'
+    end
+  end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
