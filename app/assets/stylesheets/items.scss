@@ -8,23 +8,23 @@
 .items_index {
 /*アイテム名・ジャンル名・メモ*/
   td:nth-child(1), td:nth-child(2) {
-    width: 20%;
+    width: 18%;
   }
 /*個数*/
   td:nth-child(3) {
-    width: 15%;
+    width: 14%;
   }
 /*期限*/
   td:nth-child(4){
-    width: 10%;
+    width: 11%;
   }
 /*メモ*/
   td:nth-child(5) {
-    width: 15%;
+    width: 17%;
   }
 /*編集・削除ボタン*/
   td:nth-child(6), td:nth-child(7) {
-    width: 10%;
+    width: 11%;
   }
   .fa-minus-square {
     color: #FF4B00;
@@ -57,7 +57,7 @@
 }
 #item_image {
   margin: 0 auto;
-  padding-right: 24px;
+  padding-left: 8px;
 }
 .name {
   margin-top: 80px;
@@ -82,6 +82,9 @@
   .item_field {
     margin-left: 98px;
   }
+  p {
+    text-decoration: underline;
+  }
 }
 .memo_area {
   width: 200px;
@@ -96,23 +99,11 @@
 
   /*このページでのレスポンシブ対応*/
 @media screen and (max-width:992px){
-  .items_form {
-    text-align: center;
+  .item_image {
+    margin-top: 20px;
+    text-align: left;
   }
-  .add_genre {
-    label {
-      padding-left: 68px;
-    }
-    .item_field {
-      margin-left: 34px;
-    }
-  }
-  .items_show_bottom {
-    max-width: 300px;
-    margin: 0 auto;
-    .items {
-      width: 300px;
-      margin: 50px auto 0;
-    }
+  #item_image {
+    padding-left: 0px;
   }
 }

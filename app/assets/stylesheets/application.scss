@@ -27,9 +27,11 @@ clearfix::after {
 /*共通設定*/
 body {
   /*↓ゴシック体フォント*/
-  /*font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;*/
-  font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;
-  font-size: 16px;
+  font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;
+  font-weight: 600;
+  /*↓明朝体フォント*/
+  /*font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;*/
+  font-size: 18px;
 }
 /*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
 .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
@@ -59,7 +61,8 @@ body {
   margin-top: -50px;
 }
 a {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 800;
   color: #005AFF;
   text-decoration: none;
   padding: 5px;
@@ -68,21 +71,21 @@ a:hover {
   background-color:#C8C8CB;
   text-decoration: none;
 }
+h1, h2, h3 {
+  font-weight: 800;
+}
 
 /*ヘッダー*/
 .navbar {
   margin: 0;
-  padding: 0;
   border-radius: 0px;
-  position: fixed;
-  min-height: 50px;
   border: 0px;
-}
-.navbar {
   height: 60px;
   padding: 0 100px;
+  display: flex;
+  align-items: center;
   .btn.btn-link {
-    padding: 0 1px;
+    padding: 0;
   }
 }
 a:hover.btn.btn-link {
@@ -91,7 +94,7 @@ a:hover.btn.btn-link {
   }
 .navbar-brand {
   margin: 0;
-  font-size: 30px;
+  padding: 0;
   .logo {
     font-size: 30px;
     color: #F6AA00;
@@ -100,10 +103,15 @@ a:hover.btn.btn-link {
 .nav-link {
   font-size: 18px;
   color: #F6AA00;
+  font-weight: 800;
 }
 
   /*このページでのレスポンシブ対応*/
 @media screen and (max-width:992px){
+  .navbar {
+    height: 80px;
+    padding: 0 50px 0 30px;
+  }
   .navbar-collapse {
     background-color: #343A40;
     margin-top: -2px;
@@ -114,7 +122,9 @@ a:hover.btn.btn-link {
 }
 .navbar-toggler{
   border-color: #F6AA00;
+  margin-right: 5px;
 }
+
 /*main*/
 .field_with_errors {
   display: inline;
@@ -136,7 +146,6 @@ a:hover.btn.btn-link {
 .container-fluid {
   margin: 80px 0 0;
   padding: 0;
-  width: 100%;
 }
 form {
   width: 100%;
@@ -144,9 +153,18 @@ form {
 .row {
   margin: 0 50px 50px;
 }
+
+@media screen and (max-width:992px){
+  .container-fluid {
+    margin: 100px 0 0;
+  }
+}
 /*footer*/
 footer {
-  height: 30px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .text-right {
   color: #F6AA00;
@@ -154,12 +172,20 @@ footer {
   font-size: 20px;
   padding-right: 100px;
 }
+@media screen and (max-width:992px){
+  .text-right {
+    padding-right: 30px;
+  }
+}
 
 /*registration*/
 .registration_new, .registration_edit, .passwords_new {
   margin: 0 auto 50px;
   .field {
   margin: 50px;
+   p {
+    text-decoration: underline;
+   }
   }
   label {
     text-align: left;
