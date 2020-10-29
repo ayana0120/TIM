@@ -114,6 +114,7 @@ a:hover.btn.btn-link {
   }
   .navbar-collapse {
     background-color: #343A40;
+    margin-top: -2px;
   }
 }
 .navbar-toggler .navbar-toggler-icon {
@@ -266,7 +267,4 @@ footer {
 .btn.btn-info {
   color: #FFFFFF;
   background-color: #4BC4FF;
-}
-.btn {
-  font-weight: 800;
 }
