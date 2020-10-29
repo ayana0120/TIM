@@ -1,18 +1,15 @@
 // Place all the styles related to the genres controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.genres_new {
-  table-layout: fixed;
+.genres_new, .genres_index {
   .btn {
-  	width: 150px;
-  	text-align: center;
+    width: 125px;
   }
-}
-.genres_index {
-  table-layout: fixed;
-  .btn {
-  	width: 150px;
-  	text-align: center;
+  td {
+    width: 30%;
+  }
+  td:nth-child(3), td:nth-child(4) {
+    width: 20%;
   }
 }
 
