@@ -6,7 +6,7 @@
 
 <%= form_with model:@item, class:"form", local: true do |f| %>
   <div class="row">
-    <div class="col-lg-4 offset-lg-1 col-md-12">
+    <div class="col-lg-4 offset-lg-1 col-md-9 offset-md-3">
     <h2>アイテム編集</h2>
       <div class="item_image">
         <%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 offset-lg-1 col-md-12 items_form">
+    <div class="col-lg-6 offset-lg-1 col-md-9 offset-md-3 items_form">
       <div class="items name">
         <%= f.label :アイテム名 %>
         <%= f.text_field :name, class:"item_field" %>
