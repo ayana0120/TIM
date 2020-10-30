@@ -30,7 +30,7 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class="items add_genre">
           <%= f.label :ジャンル追加 %>
-          <%= f.text_field :name, class:"item_field" %>
+          <%= f.text_field :name, class:"item_field" %><br>
           <%= f.submit "追加", class: "btn btn-primary", formaction: genres_path(@genre) %></td>
         </div>
       <% end %>
