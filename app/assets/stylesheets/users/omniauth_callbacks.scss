@@ -36,7 +36,7 @@
   margin: 0 0 5px 2px;
 }
 
-/*session_new/SNSログインボタン*/
+/*session_new/registartion_new&editのSNSログインボタン*/
 .session_google {
   width: 366px;
   height: 44px;
@@ -72,7 +72,7 @@
   text-align: center;
   margin: 0px 5px 15px;
   box-shadow: 0px 1px 2px gray;
-  a.twitter_session_new {
+  .twitter_session_new {
   	font-family: "Arial";
   	font-size: 20px;
     font-weight: 400;
@@ -91,6 +91,83 @@
   	vertical-align: middle;
   }
 }
-.session_yahoo {
-  margin-bottom: 15px;
+.session_twitter {
+  width: 366px;
+  height: 44px;
+  background-color: #1DA1F2;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0px 5px 15px;
+  box-shadow: 0px 1px 2px gray;
+  .twitter_session_new {
+    font-family: "Arial";
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 0;
+  }
+  b {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 58px;
+    }
+  .fa-twitter {
+    padding: 2px 0 2px 10px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+/*スマホ*/
+@media screen and (max-width:768px){
+  .session_google, .session_twitter, .session_yahoo {
+    width: 100%;
+    b {
+    padding: 0px;
+    }
+  }
+  .session_google {
+    margin: 15px 0;
+    .fa-google {
+      padding: 0;
+    }
+  }
+  .session_twitter {
+    margin: 0 0 15px;
+    .fa-twitter {
+      padding: 0;
+    }
+  }
+  .session_yahoo {
+    height: 44px;
+    background-color: #FF0033;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0px 1px 2px gray;
+    .yahoo_session_new {
+      font-size: 20px;
+      font-weight: 400;
+      color: #FFFFFF;
+      display: inline-block;
+      padding: 0;
+      b {
+        display: table-cell;
+        vertical-align: middle;
+        }
+      .fa-yahoo {
+        padding: 0;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    .yahoo_session_lg {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width:768px){
+  .yahoo_session_new {
+      display: none;
+  }
 }
