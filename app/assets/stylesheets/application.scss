@@ -26,11 +26,11 @@ clearfix::after {
 }
 /*共通設定*/
 body {
+  /*↓明朝体フォント*/
+  /*font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;*/
   /*↓ゴシック体フォント*/
   font-family: "BIZ UDGothic","Yu Gothic","YuGothic","Hiragino Sans",sans-serif;
   font-weight: 600;
-  /*↓明朝体フォント*/
-  /*font-family: "BIZ UDMincho","Yu Mincho","YuMincho","Hiragino Mincho Pro",serif;*/
   font-size: 18px;
 }
 /*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
@@ -106,23 +106,24 @@ a:hover.btn.btn-link {
   font-weight: 800;
 }
 
-  /*このページでのレスポンシブ対応*/
+/*タブレット以下*/
 @media screen and (max-width:992px){
   .navbar {
-    height: 80px;
-    padding: 0 50px 0 30px;
+    padding: 0;
   }
   .navbar-collapse {
     background-color: #343A40;
-    margin-top: -2px;
   }
-}
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246,170,0,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-.navbar-toggler{
-  border-color: #F6AA00;
-  margin-right: 5px;
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246,170,0,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .navbar-toggler{
+    border-color: #F6AA00;
+    margin-right: 5px;
+  }
+  .nav-item {
+    padding: 0 10px;
+  }
 }
 
 /*main*/
@@ -147,18 +148,17 @@ a:hover.btn.btn-link {
   margin: 80px 0 0;
   padding: 0;
 }
-form {
-  width: 100%;
-}
 .row {
   margin: 0 50px 50px;
 }
 
+/*タブレット以下*/
 @media screen and (max-width:992px){
-  .container-fluid {
-    margin: 100px 0 0;
+  .row {
+    margin: 0 0 50px;
   }
 }
+
 /*footer*/
 footer {
   height: 40px;
@@ -172,15 +172,15 @@ footer {
   font-size: 20px;
   padding-right: 100px;
 }
+/*タブレット以下*/
 @media screen and (max-width:992px){
   .text-right {
-    padding-right: 30px;
+  padding-right: 5px;
   }
 }
 
 /*registration*/
 .registration_new, .registration_edit, .passwords_new {
-  margin: 0 auto 50px;
   .field {
   margin: 50px;
    p {
@@ -198,11 +198,7 @@ footer {
 }
 .registration_edit {
   .actions {
-    text-align: center;
-    margin: 50px;
     .btn {
-      font-size: 18px;
-      height: 40px;
       width: 180px;
     }
   }
@@ -214,6 +210,24 @@ footer {
     .btn {
       font-size: 18px;
       height: 40px;
+    }
+  }
+}
+
+/*スマホ以下*/
+@media screen and (max-width:768px){
+  .registration_new, .registration_edit, .passwords_new {
+    .field {
+      margin: 50px 0;
+    }
+  .actions {
+    text-align: center;
+    margin: 50px;
+    .btn {
+      padding: 6px 0;
+      font-size: 18px;
+      height: 40px;
+      }
     }
   }
 }
@@ -249,6 +263,12 @@ footer {
 .session_sns_login {
   margin-top: 30px;
   margin-left: 5%;
+}
+/*スマホ以下*/
+@media screen and (max-width:768px){
+  .session_sns_login {
+    margin-left: 0;
+  }
 }
 
 /*ボタンの色*/
