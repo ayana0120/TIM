@@ -91,7 +91,7 @@ h1, h2, h3 {
 a:hover.btn.btn-link {
   background-color:#C8C8CB;
   text-decoration: none;
-  }
+}
 .navbar-brand {
   margin: 0;
   padding: 0;
@@ -175,14 +175,14 @@ footer {
 /*タブレット以下*/
 @media screen and (max-width:992px){
   .text-right {
-  padding-right: 5px;
+    padding-right: 5px;
   }
 }
 
 /*registration*/
 .registration_new, .registration_edit, .passwords_new {
   .field {
-  margin: 50px;
+    margin: 50px;
    p {
     text-decoration: underline;
    }
@@ -234,20 +234,20 @@ footer {
 
 /*session*/
 .session_new {
-  margin: 0 auto 100px;
+    margin: 0 auto;
   a {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   .field {
-  margin: 50px;
-  }
-  label {
-    text-align: left;
+    margin: 50px;
   }
   .log_in_form {
     width: 300px;
     height: 30px;
     float: right;
+  }
+  .remember_checkbox {
+    display: inline-block;
   }
   .actions {
     margin: 50px 0 0;
@@ -266,6 +266,14 @@ footer {
 }
 /*スマホ以下*/
 @media screen and (max-width:768px){
+  .session_new {
+    .field {
+      margin: 0;
+    }
+    .actions {
+      margin: 0;
+    }
+  }
   .session_sns_login {
     margin-left: 0;
   }
