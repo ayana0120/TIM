@@ -6,7 +6,7 @@
 
 <%= form_with model:@item, class:"form", local: true do |f| %>
   <div class="row">
-    <div class="col-lg-4 offset-lg-1 col-md-12">
+    <div class="col-md-4 offset-md-1 col-sm-12">
     <h2>アイテム追加</h2>
   	  <div class="item_image">
   	  	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
@@ -15,7 +15,7 @@
   	  </div>
     </div>
 
-    <div class="col-lg-6 offset-lg-1 col-md-12 items_form">
+    <div class="col-md-5 offset-md-1 col-sm-12 items_form">
       <div class="items name">
         <%= f.label :アイテム名 %>
     	  <%= f.text_field :name, class:"item_field" %>
@@ -30,7 +30,7 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class="items add_genre">
           <%= f.label :ジャンル追加 %>
-          <%= f.text_field :name, class:"item_field" %>
+          <%= f.text_field :name, class:"item_field" %><br>
           <%= f.submit "追加", class: "btn btn-primary", formaction: genres_path(@genre) %></td>
         </div>
       <% end %>
@@ -42,7 +42,7 @@
       <div class="items exp">
         <%= f.label :期限 %>
     	  <%= f.date_field :exp, class:"item_field" %>
-        <p>※登録した期限の3日前と当日にお知らせメールが届きます</p>
+        <br><p>※登録した期限の3日前と当日にお知らせメールが届きます</p>
       </div>
       <div class="items memo">
         <%= f.label :メモ %>
