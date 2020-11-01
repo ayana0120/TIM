@@ -6,9 +6,13 @@
   float: right;
 }
 .items_index {
-/*アイテム名・ジャンル名*/
-  td:nth-child(1), td:nth-child(2) {
-    width: 18%;
+/*ジャンル名*/
+  td:nth-child(1) {
+    width: 16%;
+  }
+/*アイテム名*/
+  td:nth-child(2) {
+    width: 20%;
   }
 /*個数*/
   td:nth-child(3) {
@@ -92,21 +96,6 @@
 /*タブレット以下*/
 @media screen and (max-width:992px) {
   .items_index {
-    th:nth-child(1), th:nth-child(2) {
-      width: 25%;
-    }
-    th:nth-child(3) {
-      width: 12%;
-      .fas {
-        display: none;
-      }
-    }
-    th:nth-child(4){
-      width: 12%;
-    }
-    th:nth-child(5) {
-      width: 26%;
-    }
     th:nth-child(6), th:nth-child(7) {
       display: none;
     }
@@ -155,12 +144,6 @@
     }
     td:nth-child(1), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
       display: none;
-    }
-    th:nth-child(2){
-      width: 80%;
-    }
-    th:nth-child(3) {
-      width: 20%;
     }
     th:nth-child(1), th:nth-child(4), th:nth-child(6), th:nth-child(7), th:nth-child(5) {
       display: none;
