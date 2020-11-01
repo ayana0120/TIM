@@ -64,7 +64,6 @@
 #item_image {
   max-width: 300px;
   margin: 0 auto;
-  padding-left: 8px;
 }
 .name {
   margin-top: 80px;
@@ -92,9 +91,6 @@
 }
 /*タブレット以下*/
 @media screen and (max-width:992px) {
-  #item_image {
-    padding-left: 0px;
-  }
   .items_index {
     th:nth-child(1), th:nth-child(2) {
       width: 25%;
