@@ -6,9 +6,13 @@
   float: right;
 }
 .items_index {
-/*アイテム名・ジャンル名・メモ*/
-  td:nth-child(1), td:nth-child(2) {
-    width: 18%;
+/*ジャンル名*/
+  td:nth-child(1) {
+    width: 16%;
+  }
+/*アイテム名*/
+  td:nth-child(2) {
+    width: 20%;
   }
 /*個数*/
   td:nth-child(3) {
@@ -52,9 +56,41 @@
     width: 200px;
   	height: 30px;
     float: right;
+    display: flex;
+    align-items: center;
   }
   .btn {
   	width: 336px;
+  }
+  .quantity_field {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+  }
+  .fa-minus-square {
+    color: #FF4B00;
+    font-size: 30px;
+  }
+  .fa-plus-square {
+    color: #005AFF;
+    font-size: 30px;
+  }
+  input[type="button" i] {
+    appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: -internal-light-dark(black, white);
+    background-color: white;
+    box-sizing: border-box;
+    padding: 6px;
+    border-width: 0;
+    border-style: none;
+    border-color: white;
+    border-image: initial;
+    outline:0;
   }
 }
 .item_image {
@@ -62,8 +98,8 @@
   text-align: center;
 }
 #item_image {
+  max-width: 300px;
   margin: 0 auto;
-  padding-left: 8px;
 }
 .name {
   margin-top: 80px;
@@ -91,25 +127,7 @@
 }
 /*タブレット以下*/
 @media screen and (max-width:992px) {
-  #item_image {
-    padding-left: 0px;
-  }
   .items_index {
-    th:nth-child(1), th:nth-child(2) {
-      width: 25%;
-    }
-    th:nth-child(3) {
-      width: 12%;
-      .fas {
-        display: none;
-      }
-    }
-    th:nth-child(4){
-      width: 12%;
-    }
-    th:nth-child(5) {
-      width: 26%;
-    }
     th:nth-child(6), th:nth-child(7) {
       display: none;
     }
@@ -147,8 +165,8 @@
 /*スマホ以下*/
 @media screen and (max-width:768px){
   .items_index {
-    td:nth-child(2), td:nth-child(5) {
-      width: 40%;
+    td:nth-child(2) {
+      width: 80%;
     }
     td:nth-child(3) {
       width: 20%;
@@ -156,19 +174,10 @@
         display: none;
       }
     }
-    td:nth-child(1), td:nth-child(4), td:nth-child(6), td:nth-child(7) {
+    td:nth-child(1), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
       display: none;
     }
-    th:nth-child(2), th:nth-child(5) {
-      width: 39%;
-    }
-    th:nth-child(3) {
-      width: 22%;
-      .fas {
-        display: none;
-      }
-    }
-    th:nth-child(1), th:nth-child(4), th:nth-child(6), th:nth-child(7) {
+    th:nth-child(1), th:nth-child(4), th:nth-child(6), th:nth-child(7), th:nth-child(5) {
       display: none;
     }
   }
