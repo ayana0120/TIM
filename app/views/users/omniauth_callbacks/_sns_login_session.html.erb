@@ -11,5 +11,8 @@
 </div>
 
 <div class="session_yahoo">
-  <%= link_to image_tag("yahoologin_lg.gif"), user_yahoojp_omniauth_authorize_path, method: :get %>
+  <%= link_to image_tag("yahoologin_lg.gif"), user_yahoojp_omniauth_authorize_path, method: :get, class:"yahoo_session_lg"%>
+  <%= link_to user_yahoojp_omniauth_authorize_path, method: :get, class:"yahoo_session_new" do %>
+  	<i class="fab fa-yahoo fa-2x"></i><b>ログイン</b>
+  <% end %>
 </div>

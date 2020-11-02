@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6 offset-3">
+  <div class="col-md-6 offset-md-3 col-sm-12">
     <div class="registration_edit">
       <h2>ユーザー情報変更</h2>
 
@@ -21,12 +21,12 @@
       <% end %>
 
         <div class="field password1">
-          <i>変更しない場合は空欄のままにしてください</i><br>
+          <p>※変更しない場合は空欄のままにしてください</p>
           <%= f.label :パスワード %>
+          <%= f.password_field :password, autocomplete: "new-password", class:"sign_up_form" %><br>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %>文字以上)</em>
           <% end %>
-          <%= f.password_field :password, autocomplete: "new-password", class:"sign_up_form" %>
         </div>
 
         <div class="field password2">

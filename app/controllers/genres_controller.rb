@@ -4,7 +4,7 @@ class GenresController < ApplicationController
 
   def index
     @genre = current_user.genres.new
-  	@genres = current_user.genres.all
+  	@genres = current_user.genres.page(params[:page])
     @user = current_user
   end
 

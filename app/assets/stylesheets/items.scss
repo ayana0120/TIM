@@ -6,25 +6,29 @@
   float: right;
 }
 .items_index {
-/*アイテム名・ジャンル名・メモ*/
-  td:nth-child(1), td:nth-child(2) {
+/*ジャンル名*/
+  td:nth-child(1) {
+    width: 16%;
+  }
+/*アイテム名*/
+  td:nth-child(2) {
     width: 20%;
   }
 /*個数*/
   td:nth-child(3) {
-    width: 15%;
+    width: 14%;
   }
 /*期限*/
   td:nth-child(4){
-    width: 10%;
+    width: 11%;
   }
 /*メモ*/
   td:nth-child(5) {
-    width: 15%;
+    width: 17%;
   }
 /*編集・削除ボタン*/
   td:nth-child(6), td:nth-child(7) {
-    width: 10%;
+    width: 11%;
   }
   .fa-minus-square {
     color: #FF4B00;
@@ -35,57 +39,85 @@
 }
 
 /*items/new・edit・show*/
+.items_show_bottom {
+  .fa-minus-square {
+    color: #FF4B00;
+  }
+  .fa-plus-square {
+    color: #005AFF;
+  }
+}
 .items {
   margin-top: 50px;
   label {
   	margin: 0;
   }
-  .item_field, #item_genre_id {
+  .item_field {
     width: 200px;
   	height: 30px;
+    float: right;
+    display: flex;
+    align-items: center;
   }
   .btn {
   	width: 336px;
+  }
+  .quantity_field {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+  }
+  .fa-minus-square {
+    color: #FF4B00;
+    font-size: 30px;
+  }
+  .fa-plus-square {
+    color: #005AFF;
+    font-size: 30px;
+  }
+  input[type="button" i] {
+    appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: -internal-light-dark(black, white);
+    background-color: white;
+    box-sizing: border-box;
+    padding: 6px;
+    border-width: 0;
+    border-style: none;
+    border-color: white;
+    border-image: initial;
+    outline:0;
   }
 }
 .item_image {
   margin-top: 20px;
   text-align: center;
-  h2 {
-    text-align: left;
-  }
 }
 #item_image {
+  max-width: 300px;
   margin: 0 auto;
-  padding-right: 24px;
 }
 .name {
   margin-top: 80px;
-  .item_field {
-    margin-left: 50px;
-  }
-}
-.genre {
-  .item_field {
-    margin-left: 66px;
-  }
 }
 .add_genre {
-  .item_field {
-    margin-left: 34px;
-  }
   .btn {
     width: 60px;
   }
 }
-.quantity, .exp {
-  .item_field {
-    margin-left: 98px;
+.exp {
+  p {
+    text-decoration: underline;
+    margin-top: 10px;
   }
 }
 .memo_area {
   width: 200px;
-  margin-left: 98px;
+  float: right;
 }
 .edit_delete {
   margin-top: 50px;
@@ -93,26 +125,60 @@
   width: 125px;
   }
 }
-
-  /*このページでのレスポンシブ対応*/
-@media screen and (max-width:992px){
-  .items_form {
-    text-align: center;
+/*タブレット以下*/
+@media screen and (max-width:992px) {
+  .items_index {
+    th:nth-child(6), th:nth-child(7) {
+      display: none;
+    }
+    td:nth-child(1), td:nth-child(2) {
+      width: 25%;
+    }
+    td:nth-child(3) {
+      width: 12%;
+      .fas {
+        display: none;
+      }
+    }
+    td:nth-child(4){
+      width: 12%;
+    }
+    td:nth-child(5) {
+      width: 26%;
+    }
+    td:nth-child(6), td:nth-child(7) {
+      display: none;
+    }
+  }
+  .items {
+    .btn {
+      width: 100%;
+    }
   }
   .add_genre {
-    label {
-      padding-left: 68px;
-    }
-    .item_field {
-      margin-left: 34px;
+    .btn {
+      width: 60px;
     }
   }
-  .items_show_bottom {
-    max-width: 300px;
-    margin: 0 auto;
-    .items {
-      width: 300px;
-      margin: 50px auto 0;
+}
+
+/*スマホ以下*/
+@media screen and (max-width:768px){
+  .items_index {
+    td:nth-child(2) {
+      width: 80%;
+    }
+    td:nth-child(3) {
+      width: 20%;
+      .fas {
+        display: none;
+      }
+    }
+    td:nth-child(1), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
+      display: none;
+    }
+    th:nth-child(1), th:nth-child(4), th:nth-child(6), th:nth-child(7), th:nth-child(5) {
+      display: none;
     }
   }
 }

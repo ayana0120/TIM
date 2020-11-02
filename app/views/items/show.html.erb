@@ -1,34 +1,40 @@
 <div class="row">
-  <div class="col-lg-4 offset-lg-1 col-md-12">
-    <div class="item_image">
+  <div class="col-md-4 offset-md-1 col-sm-12">
     <h2>アイテム情報</h2>
-    	<%= attachment_image_tag @item, :image, size: "300x300", format: "jpg",
+    <div class="item_image">
+    	<%= attachment_image_tag @item, :image, :fill ,300, format: "jpg",
     	fallback: "no-data.jpg", size: "300x300" %>
     </div>
   </div>
 
-  <div class="col-lg-6 offset-lg-1 col-md-12 items_show_bottom">
-    <div class="items name"><b>アイテム名</b>
+  <div class="col-md-5 offset-md-1 col-sm-12 items_show_bottom">
+    <div class="items name">アイテム名
       <span class="item_field">
     	  <%= @item.name %>
       </span>
     </div>
-    <div class="items genre"><b>ジャンル</b>
+    <div class="items genre">ジャンル
       <span class="item_field">
         <%= @item.genre.name %>
       </span>
     </div>
-    <div class="items quantity"><b>個数</b>
+    <div class="items quantity">個数
       <span class="item_field">
+        <%= link_to quantity_decreases_path(@item), method: :patch do %>
+          <i class="fas fa-minus-square"></i>
+        <% end %>
         <%= @item.quantity %>
+        <%= link_to quantity_increases_path(@item), method: :patch do %>
+          <i class="fas fa-plus-square"></i>
+        <% end %>
       </span>
     </div>
-    <div class="items exp"><b>期限</b>
+    <div class="items exp">期限
       <span class="item_field">
         <%= @item.exp %>
       </span>
     </div>
-    <div class="items memo"><b>メモ</b>
+    <div class="items memo">メモ
       <span class="memo_area">
         <%= @item.memo %>
       </span>
