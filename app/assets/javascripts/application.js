@@ -8,7 +8,7 @@
 // compiled file. JavaScript code in this file should be added after the last require_* statement.
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
+// about splusported directives.
 //
 //= require rails-ujs
 //= require activestorage
@@ -36,4 +36,9 @@ $(document).on('click',function(e) {
    if(!$(e.target).closest('#navbarhamburger').length) {
      $('.navbar-collapse').collapse('hide');
    }
+});
+
+// items/new&editのプラスマイナスボタンで増減
+$(function(){
+  $('#item_quantity').numberSpinner();
 });

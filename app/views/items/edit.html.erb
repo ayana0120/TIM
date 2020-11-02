@@ -20,25 +20,35 @@
         <%= f.label :アイテム名 %>
         <%= f.text_field :name, class:"item_field" %>
       </div>
+
       <div class="items genre">
         <%= f.label :ジャンル %>
         <%= f.select :genre_id, current_user.genres.all.map {|genre| [genre.name, genre.id ] }, {}, class:"item_field" %>
       </div>
+
       <div class="items quantity">
         <%= f.label :個数 %>
-        <%= f.number_field :quantity, class:"item_field" %>
+        <div class="item_field">
+          <input type="button" value="&#xf146;" class="fas fa-minus-square" id="down">
+            <%= f.number_field :quantity, class:"quantity_field" %>
+          <input type="button" value="&#xf0fe;" class="fas fa-plus-square" id="up">
+        </div>
       </div>
+
       <div class="items exp">
         <%= f.label :期限 %>
         <%= f.date_field :exp, class:"item_field" %>
       </div>
+
       <div class="items memo">
         <%= f.label :メモ %>
         <%= f.text_area :memo, class:"memo_area" %>
       </div>
+
       <div class="items actions">
         <%= f.submit "変更", class:"btn btn-success" %>
       </div>
+
     </div>
   <% end %>
 </div>
