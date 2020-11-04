@@ -50,7 +50,7 @@
 			*/
 			settings = $.extend({
 				max             : false,
-				min             : 0,
+				min             : 1,
 				step            : 1,
 				numberFormat    : false,
 				zeroPadding     : false,
