@@ -39,6 +39,8 @@ $(document).on('click',function(e) {
 });
 
 // items/new&editのプラスマイナスボタンで増減
-$(function(){
-  $('#item_quantity').numberSpinner();
+$(document).on('turbolinks:load', function() {
+  $(function(){
+    $('#item_quantity').numberSpinner();
+  });
 });
