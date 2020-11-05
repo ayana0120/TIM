@@ -79,7 +79,7 @@
     color: #005AFF;
     font-size: 30px;
   }
-  button,input[type="button" i] {
+  button {
     -webkit-appearance: none;
     background-color: white;
     padding: 0 6px;
@@ -97,6 +97,11 @@
     border-color: white;
     outline:0;
     float: right;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 .attachment {
