@@ -49,6 +49,7 @@
 }
 .items {
   margin-top: 50px;
+  vertical-align : top;
   label {
   	margin: 0;
   }
@@ -58,6 +59,9 @@
     float: right;
     display: flex;
     align-items: center;
+    span {
+      vertical-align : top;
+    }
   }
   .btn {
   	width: 336px;
@@ -75,22 +79,24 @@
     color: #005AFF;
     font-size: 30px;
   }
-  input[type="button" i] {
-    appearance: push-button;
-    user-select: none;
-    white-space: pre;
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: -internal-light-dark(black, white);
+  button,input[type="button" i] {
+    -webkit-appearance: none;
     background-color: white;
-    box-sizing: border-box;
-    padding: 6px;
+    padding: 0 6px;
     border-width: 0;
     border-style: none;
     border-color: white;
-    border-image: initial;
     outline:0;
+  }
+  input[type="button" i] {
+    -webkit-appearance: none;
+    background-color: white;
+    padding: 0 6px;
+    border-width: 0;
+    border-style: none;
+    border-color: white;
+    outline:0;
+    float: right;
   }
 }
 .attachment {
