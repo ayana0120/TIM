@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   def index
     if params[:genre_id]
       @genre = current_user.genres.find(params[:genre_id])
-      @items = @genre.items.page(params[:page]).includes(:genre)
+      @items = @genre.items.page(params[:page]).order("exp IS NULL, exp ASC").includes(:genre)
     else
       @items = current_user.items.page(params[:page]).order("updated_at DESC").includes(:genre)
     end
