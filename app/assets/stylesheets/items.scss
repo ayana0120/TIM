@@ -37,7 +37,18 @@
     color: #005AFF;
   }
 }
-
+.pagination {
+  display:flex;
+  justify-content:center;
+  .page-link {
+    background-color: #F6AA00;
+    border: 2px solid;
+  }
+  a{
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+}
 /*items/new・edit・show*/
 .items_show_bottom {
   .fa-minus-square {
@@ -75,22 +86,28 @@
     color: #005AFF;
     font-size: 30px;
   }
-  input[type="button" i] {
-    appearance: push-button;
-    user-select: none;
-    white-space: pre;
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: -internal-light-dark(black, white);
+  button {
+    -webkit-appearance: none;
     background-color: white;
-    box-sizing: border-box;
-    padding: 6px;
+    padding: 0 6px;
     border-width: 0;
     border-style: none;
     border-color: white;
-    border-image: initial;
-    outline:0;
+  }
+  input[type="button" i] {
+    -webkit-appearance: none;
+    background-color: white;
+    padding: 0 6px;
+    border-width: 0;
+    border-style: none;
+    border-color: white;
+    outline: none;
+    float: right;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 .attachment {
