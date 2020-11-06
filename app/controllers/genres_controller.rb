@@ -14,14 +14,17 @@ class GenresController < ApplicationController
     if @new_genre.present? &&
       @new_genre.name == @genre.name
       flash[:alert] = "すでに存在するジャンルです"
+      @genres = current_user.genres.page(params[:page])
       redirect_back fallback_location: root_path
     else
     	if @genre.save
         flash[:notice] = "ジャンルを追加しました"
+        @genres = current_user.genres.page(params[:page])
     	  redirect_back fallback_location: root_path
     	else
         @genres = current_user.genres.all
         flash[:alert] = "ジャンル名を入力してください"
+        @genres = current_user.genres.page(params[:page])
     	  redirect_back fallback_location: root_path
     	end
     end
