@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @limit_items = current_user.items.limit(5).order("exp IS NULL ASC").includes(:genre)
+    @limit_items = current_user.items.limit(5).order("exp IS NULL, exp ASC").includes(:genre)
     @genres = current_user.genres.all
     if params[:genre_id]
       @genre = current_user.genres.find(params[:genre_id])
