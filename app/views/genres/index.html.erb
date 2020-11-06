@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-lg-10 offset-lg-1 col-md-12">
-    <%= form_with model: @genre, class:"form", local: true do |f| %>
+    <%= form_with model: @genre, class:"form" do |f| %>
     <h2>ジャンル一覧</h2>
     <table class="table genres_new">
       <thead class="contents">
@@ -28,7 +28,7 @@
     </table>
     <% end %>
     <% @genres.each do |genre| %>
-      <%= form_with model:genre, local: true do |f| %>
+      <%= form_with model:genre do |f| %>
       <table class="table genres_index">
         <tr>
           <td>
@@ -43,6 +43,6 @@
       </table>
       <% end %>
     <% end %>
+    <%= paginate @genres %>
   </div>
 </div>
-<%= paginate @genres %>
