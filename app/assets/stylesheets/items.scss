@@ -37,7 +37,18 @@
     color: #005AFF;
   }
 }
-
+.pagination {
+  display:flex;
+  justify-content:center;
+  .page-link {
+    background-color: #F6AA00;
+    border: 2px solid;
+  }
+  a{
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+}
 /*items/new・edit・show*/
 .items_show_bottom {
   .fa-minus-square {
