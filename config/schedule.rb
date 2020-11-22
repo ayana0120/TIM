@@ -12,8 +12,8 @@ set :output, "log/cron.log"
 set :environment, :production
 
 every 1.days, at: "11:00 pm" do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
+  #   command "/usr/bin/some_great_command"
+  #   runner "MyModel.some_method"
   rake "task:notification"
 end
 #

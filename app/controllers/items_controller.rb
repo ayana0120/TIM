@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only:[:edit, :show, :update, :destroy,
-  :quantity_decreases, :quantity_increases]
-  before_action :set_search_box, only:[:index, :search]
+  before_action :set_item, only: [
+    :edit, :show, :update, :destroy,
+    :quantity_decreases, :quantity_increases,
+  ]
+  before_action :set_search_box, only: [:index, :search]
   before_action :authenticate_user!
 
   def index
@@ -79,7 +81,7 @@ class ItemsController < ApplicationController
   protected
 
   def item_params
-    params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id )
+    params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id)
   end
 
   def add_item_params
@@ -98,5 +100,4 @@ class ItemsController < ApplicationController
     @q = current_user.items.ransack(params[:q])
     @items = @q.result(distinct: true)
   end
-
 end
