@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   with_options presence: true do
-  	validates :name
-  	validates :quantity
+    validates :name
+    validates :quantity
   end
 
   validate :name_valid?
@@ -14,9 +14,8 @@ class Item < ApplicationRecord
   private
 
   def name_valid?
-  	if genre.nil?
-  		errors.add(:genre, "を選択してください")
-  	end
+    if genre.nil?
+      errors.add(:genre, "を選択してください")
+    end
   end
-
 end

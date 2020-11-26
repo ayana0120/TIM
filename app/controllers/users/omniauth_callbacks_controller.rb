@@ -1,5 +1,4 @@
 class Users::OmniauthCallbacksController < ApplicationController
-
   def twitter
     callback_for(:twitter)
   end
@@ -26,5 +25,4 @@ class Users::OmniauthCallbacksController < ApplicationController
   def failure
     redirect_to root_path
   end
-
 end

@@ -29,10 +29,9 @@
 
 
 ### <a href="https://docs.google.com/spreadsheets/d/19eqUeh22szf7aTuUG6MXMOTqff2Ux-k8YkvTdJWNTW8/edit?usp=sharing">機能一覧</a>
-  -期限があるものは3日前と当日にメールにて通知<br>
-  -ソーシャルログイン機能<br>
-  -検索機能<br>
-  
+  - 期限があるものは3日前と当日にメールにて通知<br>
+  - ソーシャルログイン機能<br>
+  - 検索機能<br>
 
 
 ### <a href="https://drive.google.com/file/d/1oPOvuRKuDtsICA0OxkOM21MOSedPJiDQ/view?usp=sharing">画面遷移図</a>
