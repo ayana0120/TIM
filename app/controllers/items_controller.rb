@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to items_path
+      redirect_to 'javascript:history.back()'
     else
       render :edit
     end
