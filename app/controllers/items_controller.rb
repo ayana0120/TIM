@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to items_path
+      redirect_to 'javascript:history.back()'
     else
       render :edit
     end
@@ -68,8 +68,14 @@ class ItemsController < ApplicationController
 
   def quantity_decreases
     @item.quantity -= 1
-    @item.update(add_item_params)
-    redirect_back fallback_location: root_path
+    if @item.quantity == 0
+      @item.delete
+      flash[:alert] = "アイテムを削除しました"
+      redirect_to items_path
+    else
+      @item.update(add_item_params)
+      redirect_back fallback_location: root_path
+    end
   end
 
   def quantity_increases
