@@ -57,6 +57,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # N+1問題検証
   gem 'bullet'
+  gem 'rubocop-airbnb'
 end
 
 group :test do
@@ -93,4 +94,3 @@ gem 'omniauth-yahoojp'
 gem 'dotenv-rails'
 # バッチ処理
 gem 'whenever', require: false
-

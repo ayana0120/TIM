@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only:[:edit, :show, :update, :destroy,
-  :quantity_decreases, :quantity_increases]
-  before_action :set_search_box, only:[:index, :search]
+  before_action :set_item, only: [
+    :edit, :show, :update, :destroy,
+    :quantity_decreases, :quantity_increases,
+  ]
+  before_action :set_search_box, only: [:index, :search]
   before_action :authenticate_user!
 
   def index
@@ -47,7 +49,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to items_path
+      redirect_to 'javascript:history.back()'
     else
       render :edit
     end
@@ -66,8 +68,14 @@ class ItemsController < ApplicationController
 
   def quantity_decreases
     @item.quantity -= 1
-    @item.update(add_item_params)
-    redirect_back fallback_location: root_path
+    if @item.quantity == 0
+      @item.delete
+      flash[:alert] = "アイテムを削除しました"
+      redirect_to items_path
+    else
+      @item.update(add_item_params)
+      redirect_back fallback_location: root_path
+    end
   end
 
   def quantity_increases
@@ -79,7 +87,7 @@ class ItemsController < ApplicationController
   protected
 
   def item_params
-    params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id )
+    params.require(:item).permit(:name, :image, :quantity, :exp, :memo, :genre_id)
   end
 
   def add_item_params
@@ -98,5 +106,4 @@ class ItemsController < ApplicationController
     @q = current_user.items.ransack(params[:q])
     @items = @q.result(distinct: true)
   end
-
 end

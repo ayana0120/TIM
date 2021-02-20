@@ -145,8 +145,7 @@ a:hover.btn.btn-link {
   }
 }
 .container-fluid {
-  overflow: hidden;
-  margin: 60px 0 0;
+  margin: 80px 0 0;
   padding: 0;
 }
 .row {
@@ -157,6 +156,9 @@ a:hover.btn.btn-link {
 @media screen and (max-width:992px){
   .row {
     margin: 0 0 50px;
+  }
+  .container-fluid{
+    overflow: hidden;
   }
 }
 
@@ -183,7 +185,7 @@ footer {
 /*registration*/
 .registration_new, .registration_edit, .passwords_new {
   .field {
-    margin: 50px;
+    margin: 50px 0px;
    p {
     text-decoration: underline;
    }
@@ -220,6 +222,9 @@ footer {
   .registration_new, .registration_edit, .passwords_new {
     .field {
       margin: 50px 0;
+    }
+    .sign_up_form {
+      width: 250px;
     }
   .actions {
     text-align: center;
@@ -263,7 +268,6 @@ footer {
 }
 .session_sns_login {
   margin-top: 30px;
-  margin-left: 5%;
 }
 /*スマホ以下*/
 @media screen and (max-width:768px){

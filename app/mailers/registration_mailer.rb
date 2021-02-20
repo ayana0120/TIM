@@ -1,5 +1,4 @@
 class RegistrationMailer < ApplicationMailer
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -7,7 +6,7 @@ class RegistrationMailer < ApplicationMailer
   #
   def send_when_new(user)
     @user = user
-    @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
+    @url = "http://tim0120.com/users/#{@user.id}"
     mail to: @user.email,
          subject: "会員登録が完了しました"
   end
@@ -19,7 +18,7 @@ class RegistrationMailer < ApplicationMailer
   #
   def send_when_update(user)
     @user = user
-    @url = "http://ec2-13-230-253-117.ap-northeast-1.compute.amazonaws.com/users/#{@user.id}"
+    @url = "http://tim0120.com/users/#{@user.id}"
     mail to: @user.email,
          subject: "会員情報を変更しました"
   end
