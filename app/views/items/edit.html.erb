@@ -42,6 +42,14 @@
         <%= f.date_field :exp, class:"item_field" %>
       </div>
 
+      <div class="items deadline">
+        <%= f.label :通知日時 %>
+          <div class="item_field">
+            <%= f.number_field :deadline, class:"deadline_field" %><label for="ago"> 日前</label>
+          </div>
+          <p>※指定のない場合は期限の3日前と当日に通知メールが届きます</p>
+      </div>
+
       <div class="items memo">
         <%= f.label :メモ %>
         <%= f.text_area :memo, class:"memo_area" %>

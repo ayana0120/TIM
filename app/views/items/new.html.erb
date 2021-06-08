@@ -40,8 +40,8 @@
       <div class="items quantity">
         <%= f.label :個数 %>
         <div class="item_field">
-          <input type="button" value="&#xf146;" class="fas fa-minus-square" id="down">
       	    <%= f.number_field :quantity, class:"quantity_field" %>
+          <input type="button" value="&#xf146;" class="fas fa-minus-square" id="down">
           <input type="button" value="&#xf0fe;" class="fas fa-plus-square" id="up">
         </div>
       </div>
@@ -49,7 +49,14 @@
       <div class="items exp">
         <%= f.label :期限 %>
     	  <%= f.date_field :exp, class:"item_field" %>
-        <br><p>※登録した期限の3日前と当日にお知らせメールが届きます</p>
+      </div>
+
+      <div class="items deadline">
+        <%= f.label :通知日時 %>
+          <div class="item_field">
+            <%= f.number_field :deadline, class:"deadline_field" %><label for="ago"> 日前</label>
+          </div>
+          <p>※指定のない場合は期限の3日前と当日に通知メールが届きます</p>
       </div>
 
       <div class="items memo">
