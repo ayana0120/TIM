@@ -70,6 +70,13 @@
     display: flex;
     align-items: center;
   }
+  .deadline_field {
+    width: 50px;
+    height: 30px;
+    float: right;
+    display: flex;
+    align-items: center;
+  }
   .btn {
   	width: 336px;
   }
@@ -121,6 +128,7 @@
 #item_image {
   max-width: 300px;
   margin: 0 auto;
+  font-size: 17.5px;
 }
 .name {
   margin-top: 80px;
@@ -130,7 +138,7 @@
     width: 60px;
   }
 }
-.exp {
+.deadline {
   p {
     text-decoration: underline;
     margin-top: 10px;
