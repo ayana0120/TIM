@@ -6,13 +6,23 @@ namespace :task do
 
   	items.each do |item|
   	  @user = item.user
-  	  if today.since(3.days).to_date == item.exp
-  	  	Notification.create(item_id: item, user_id: @user, action: "warning")
-  	  	NotificationMailer.warning(@user, item).deliver_now
-  	  elsif today.to_date == item.exp
-  	  	item.notifications.update(action: "expired")
-  	  	NotificationMailer.expired(@user, item).deliver_now
-  	  end
+      if item.deadline.nil?
+        if today.since(3.days).to_date == item.exp
+          Notification.create(item_id: item, user_id: @user, action: "warning")
+          NotificationMailer.warning(@user, item).deliver_now
+        elsif today.to_date == item.exp
+          item.notifications.update(action: "expired")
+          NotificationMailer.expired(@user, item).deliver_now
+        end
+      else
+    	  if today.since(item.deadline.days).to_date == item.exp
+    	  	Notification.create(item_id: item, user_id: @user, action: "warning")
+    	  	NotificationMailer.warning(@user, item).deliver_now
+    	  elsif today.to_date == item.exp
+    	  	item.notifications.update(action: "expired")
+    	  	NotificationMailer.expired(@user, item).deliver_now
+    	  end
+      end
   	end
   end
 end
