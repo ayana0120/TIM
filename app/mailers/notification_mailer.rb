@@ -9,7 +9,7 @@ class NotificationMailer < ApplicationMailer
     @item = item
     @url = "http://tim0120.com/users/#{@user.id}"
     mail to: @user.email,
-         subject: "期限の3日前をお知らせします"
+         subject: "期限をお知らせします"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
