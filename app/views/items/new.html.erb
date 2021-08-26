@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<%= form_with model:@item, class:"form" do |f| %>
+<%= form_with model:@item, local: true, class:"form" do |f| %>
   <div class="row">
     <div class="col-md-4 offset-md-1 col-sm-12">
     <h2>アイテム追加</h2>
