@@ -3,15 +3,18 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @limit_items = current_user.items.limit(5).order("exp IS NULL, exp ASC").includes(:genre)
     @genres = current_user.genres.all
-    if params[:genre_id]
-      @genre = current_user.genres.find(params[:genre_id])
-      @items - current_user.genres.items.all.includes(:genre)
+    if @user.items.where.not(exp: nil).count >= 5
+      # その日以降の期限順に5個取得
+      @limit_items = @user.items.limit(5).where("exp >= ?",Date.today).order("exp IS NULL, exp").includes(:genre)
     else
-      @new_items = current_user.items.all.includes(:genre).order(id: :desc).limit(5)
+      #nullを含んだ期限順に5個取得
+      @limit_items = @user.items.limit(5).order("exp IS NULL, exp").includes(:genre)
     end
-    @q = current_user.items.ransack(params[:q])
+    # 既に期限の切れたアイテムの期限順に5個取得
+    @expired_items = @user.items.limit(5).where("exp < ?",Date.today).order("exp IS NULL, exp").includes(:genre)
+    # アイテム検索用
+    @q = @user.items.ransack(params[:q])
     @items = @q.result(distinct: true)
   end
 
