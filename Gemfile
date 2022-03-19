@@ -6,7 +6,9 @@ ruby '2.7.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.5'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3' #do ~ end内部に追加。他のgemは残してください。
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -68,9 +70,10 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-#group :production do
+group :production do
   gem 'mysql2'
-#end
+  gem 'pg'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -94,3 +97,7 @@ gem 'omniauth-yahoojp'
 gem 'dotenv-rails'
 # バッチ処理
 gem 'whenever', require: false
+
+group :production do
+  gem 'pg'
+end
