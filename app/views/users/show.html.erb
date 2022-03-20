@@ -72,7 +72,7 @@
 	<table class="table new_items_index">
 	　<thead class="contents">
 		<tr>
-		  <th class="border-top-0">登録日順</th>
+		  <th class="border-top-0">期限切れアイテム</th>
 		  <th class="border-top-0">ジャンル</th>
 		  <th class="border-top-0">アイテム名</th>
 		  <th class="border-top-0">個数</th>
@@ -80,24 +80,26 @@
 	  </thead>
 
 	  <tbody>
-	  <% @new_items.each do |item| %>
-	  	<tr>
-	  	  <td><%= item.updated_at.strftime("%Y/%m/%d") %></td>
-	  	  <td>
-	  	  	<%= link_to items_path(genre_id: item.genre) do %>
-              <%= item.genre.name %>
-            <% end %>
-          </td>
-	  	  <td>
-	  	  	<%= link_to item_path(item) do %>
-  	  	  	  <%= item.name %>
-  	  		<% end %>
-  	  	  </td>
-	  	  <td>
-            <%= item.quantity %>
-          </td>
-	  	</tr>
-	  <% end %>
+		<% @expired_items.each do |item| %>
+		  <tr>
+		    <td>
+		      <%= item.exp %>
+		  	</td>
+		  	<td>
+		  	  <%= link_to items_path(genre_id: item.genre) do %>
+	            <%= item.genre.name %>
+	          <% end %>
+	        </td>
+		  	<td>
+		  	  <%= link_to item_path(item) do %>
+	  	  	    <%= item.name %>
+	  	  	  <% end %>
+	  	  	</td>
+		  	<td>
+	          <%= item.quantity %>
+	        </td>
+		  </tr>
+		<% end %>
 	  </tbody>
 	</table>
   </div>

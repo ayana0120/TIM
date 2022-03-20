@@ -19,8 +19,10 @@
     </div>
     <div class="items quantity">個数
       <span class="item_field">
-        <%= link_to quantity_decreases_path(@item), method: :patch do %>
-          <i class="fas fa-minus-square"></i>
+        <% unless @item.quantity == 1 %>
+          <%= link_to quantity_decreases_path(@item), method: :patch do %>
+            <i class="fas fa-minus-square"></i>
+          <% end %>
         <% end %>
         <%= @item.quantity %>
         <%= link_to quantity_increases_path(@item), method: :patch do %>

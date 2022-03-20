@@ -18,7 +18,13 @@
   <br>
   <p>
   	いつもご利用ありがとうございます。<br>
-	<b><%= @item.genre.name %>：<%= @item.name %></b>の期限切れ3日前（期限: <%= @item.exp %>）を<br>
+	<b><%= @item.genre.name %>：<%= @item.name %></b>の期限切れ
+  <% if @item.deadline.nil? %>
+    3
+  <% else %>
+    <%= @item.deadline %>
+  <% end %>
+    日前（期限: <%= @item.exp %>）を<br>
 	お知らせいたします。<br>
 	<br>
     マイページ : <%= link_to "こちら", @url %>
