@@ -97,7 +97,3 @@ gem 'omniauth-yahoojp'
 gem 'dotenv-rails'
 # バッチ処理
 gem 'whenever', require: false
-
-group :production do
-  gem 'pg'
-end
