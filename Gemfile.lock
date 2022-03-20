@@ -182,7 +182,6 @@ GEM
     mime-types-data (3.2022.0105)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.4.5)
     multi_json (1.15.0)
@@ -195,8 +194,7 @@ GEM
     net-ssh (6.1.0)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.3)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
     oauth (0.5.8)
     oauth2 (1.4.9)
@@ -392,7 +390,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt_pbkdf
@@ -440,4 +438,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   2.1.4
+   2.2.33
