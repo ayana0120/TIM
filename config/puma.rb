@@ -34,7 +34,6 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # preload_app!
 
 # Allow puma to be restarted by `rails restart` command.
-=begin
 plugin :tmp_restart
 bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
 rails_root = Dir.pwd
@@ -50,7 +49,6 @@ if Rails.env.production?
   # デーモン
   daemonize
 end
-=end
 
 #heroku用
 workers Integer(ENV['WEB_CONCURRENCY'] || 2)
