@@ -46,6 +46,8 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
@@ -90,6 +92,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-yahoojp'
+gem 'omniauth-rails_csrf_protection'
 # 環境変数
 gem 'dotenv-rails'
 # バッチ処理
